@@ -1,0 +1,314 @@
+<!DOCTYPE html><html class="light" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>About Us | Bright Future High School</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700;800;900&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #f8f9ff;
+            color: #0b1c30;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "inverse-primary": "#adc7f7",
+                      "on-secondary": "#ffffff",
+                      "on-tertiary": "#ffffff",
+                      "primary-container": "#1a365d",
+                      "on-secondary-fixed-variant": "#004881",
+                      "on-tertiary-fixed-variant": "#41474e",
+                      "on-tertiary-fixed": "#161c22",
+                      "surface": "#f8f9ff",
+                      "surface-variant": "#d3e4fe",
+                      "secondary": "#1960a3",
+                      "surface-tint": "#455f88",
+                      "surface-dim": "#cbdbf5",
+                      "surface-container-highest": "#d3e4fe",
+                      "background": "#f8f9ff",
+                      "outline": "#74777f",
+                      "on-error-container": "#93000a",
+                      "tertiary-fixed": "#dde3eb",
+                      "surface-container": "#e5eeff",
+                      "surface-container-lowest": "#ffffff",
+                      "tertiary": "#1b2127",
+                      "on-secondary-container": "#00477f",
+                      "on-tertiary-container": "#989fa6",
+                      "primary-fixed-dim": "#adc7f7",
+                      "outline-variant": "#c4c6cf",
+                      "surface-container-high": "#dce9ff",
+                      "error": "#ba1a1a",
+                      "secondary-container": "#7db6ff",
+                      "surface-bright": "#f8f9ff",
+                      "primary-fixed": "#d6e3ff",
+                      "on-primary": "#ffffff",
+                      "error-container": "#ffdad6",
+                      "on-background": "#0b1c30",
+                      "tertiary-fixed-dim": "#c1c7cf",
+                      "inverse-on-surface": "#eaf1ff",
+                      "on-surface": "#0b1c30",
+                      "on-secondary-fixed": "#001c38",
+                      "on-primary-container": "#86a0cd",
+                      "on-primary-fixed-variant": "#2d476f",
+                      "secondary-fixed": "#d3e4ff",
+                      "on-error": "#ffffff",
+                      "primary": "#002045",
+                      "surface-container-low": "#eff4ff",
+                      "inverse-surface": "#213145",
+                      "on-surface-variant": "#43474e",
+                      "tertiary-container": "#30363c",
+                      "on-primary-fixed": "#001b3c",
+                      "secondary-fixed-dim": "#a2c9ff"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "margin-desktop": "40px",
+                      "stack-lg": "32px",
+                      "stack-md": "16px",
+                      "stack-sm": "8px",
+                      "unit": "4px",
+                      "margin-mobile": "16px",
+                      "gutter": "24px",
+                      "container-max": "1280px"
+              },
+              "fontFamily": {
+                      "display-lg": ["Lexend"],
+                      "body-md": ["Inter"],
+                      "label-sm": ["Inter"],
+                      "body-lg": ["Inter"],
+                      "headline-md": ["Lexend"],
+                      "label-md": ["Inter"],
+                      "display-lg-mobile": ["Lexend"],
+                      "body-sm": ["Inter"],
+                      "headline-sm": ["Lexend"]
+              },
+              "fontSize": {
+                      "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                      "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                      "label-sm": ["12px", { "lineHeight": "14px", "fontWeight": "500" }],
+                      "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                      "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                      "label-md": ["14px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                      "display-lg-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                      "body-sm": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+                      "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "600" }]
+              }
+            },
+          },
+        }
+    </script>
+</head>
+<body class="font-body-md text-body-md overflow-x-hidden">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-margin-desktop py-4 max-w-container-max mx-auto bg-surface/80 backdrop-blur-xl border-b border-outline-variant/20 shadow-sm">
+<div class="font-display-lg text-headline-sm font-bold text-primary">Bright Future High School</div>
+<nav class="hidden md:flex gap-8 items-center">
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Home</a>
+<a class="text-secondary font-semibold border-b-2 border-secondary" href="#">About</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Academics</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Student Life</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Admissions</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">News</a>
+</nav>
+<button class="bg-primary text-on-primary px-6 py-2 rounded-xl font-semibold hover:bg-primary-container transition-all scale-95 duration-150">Portal Login</button>
+</header>
+<main class="mt-24">
+<!-- Hero Section: History & Mission -->
+<section class="px-margin-desktop py-stack-lg max-w-container-max mx-auto grid grid-cols-1 lg:grid-cols-2 gap-gutter items-center">
+<div class="space-y-stack-md">
+<span class="font-label-md text-label-md text-secondary uppercase tracking-widest">Our Legacy</span>
+<h1 class="font-display-lg text-display-lg text-primary leading-tight">Shaping Minds Since 1992.</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Bright Future High School was founded on the principle that every student possesses unique potential. For over three decades, we have been at the forefront of educational excellence, blending rigorous academics with emotional intelligence to prepare the leaders of tomorrow.</p>
+<div class="p-6 bg-surface-container-low rounded-xl border border-outline-variant/20">
+<h3 class="font-headline-sm text-headline-sm text-primary mb-2">Our Mission</h3>
+<p class="font-body-md text-body-md text-on-surface-variant italic">"To inspire a lifelong love of learning and empower students with the knowledge and character required to excel in a global society."</p>
+</div>
+</div>
+<div class="relative h-[500px] rounded-3xl overflow-hidden shadow-2xl">
+<img alt="School Building" class="w-full h-full object-cover" data-alt="A wide-angle professional architectural shot of a modern, high-tech high school building during the golden hour. The structure features sleek glass panels and warm brickwork, set against a beautifully landscaped campus with lush green lawns. The lighting is soft and inviting, reflecting a premium, academic atmosphere consistent with a prestigious institution dedicated to excellence." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMp9LDvCYXsTwMabcAj-RGu80v1wwonpIdkZUczQc0c8aA3QUWZAQogcTLDuWi7_UBwhnbLSs2UXhZhuXT5xGwCT_I8-x2oMwRtPaGhGRkN52DJPuPiKOHhz8BUY8k_dbCw6a5fjTl8lJW-xSiUaY_4hfwTYWgOHTSE4dAj4_84s75M87G3ZZMTRh96EEFae4bmVaNePhsqDJQpUBjshubKWcoWjTCHyq8Db_RuBVIFmwvCBm3UtrPw5sz_vbCklutUNV1opJmV9A">
+</div>
+</section>
+<!-- Principal's Message -->
+<section class="bg-primary text-on-primary py-24 px-margin-desktop">
+<div class="max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 items-center">
+<div class="relative group">
+<div class="absolute -inset-4 bg-secondary/20 rounded-3xl blur-xl group-hover:bg-secondary/40 transition duration-500"></div>
+<img alt="Principal Portrait" class="relative rounded-2xl w-full aspect-[4/5] object-cover shadow-2xl grayscale hover:grayscale-0 transition duration-500" data-alt="A professional portrait of a distinguished male school principal in his early 50s, wearing a tailored navy blue suit. He is standing in a brightly lit, modern office with bookshelves and a glass window in the background. The lighting is crisp and cinematic, conveying authority, approachability, and intellectual leadership within a high-end educational setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9MkbYVvaR4-M9mu1dXbRLlmTkFirSsTbjso0vUNo7DF7IMRcOP6K6CcE2g8GwslL8_baVvNcOXApqTha7njPp1LoIrZIk6thIjzYNaa4gYOUNJeeL96ItK9nC-mu1qoRzIL_HBWGGG-W4dLJTsc5OIKH8VjLrc17FtcnspAcfnPz_KcpIfDPFoLR4JWQNa31Qkb1XS3NmulxEfkYoXOXcAflRXiZ7F5XruwQMUzy3MFubUUL9eP7as_nIFfuVzR9iRRqUP1JuK7Q">
+</div>
+<div class="md:col-span-2 space-y-stack-md">
+<span class="material-symbols-outlined text-secondary text-5xl">format_quote</span>
+<h2 class="font-headline-md text-headline-md font-bold">A Message from Dr. Julian Vance</h2>
+<p class="font-body-lg text-body-lg text-surface-variant leading-relaxed">
+                        "Education is not merely the delivery of content, but the ignition of curiosity. At Bright Future, we believe in a holistic approach where academic rigor meets personal development. Our faculty is dedicated to mentoring each student, ensuring they find their voice and their purpose. I invite you to join our community where innovation is celebrated and integrity is the cornerstone of everything we do."
+                    </p>
+<div class="pt-4">
+<p class="font-display-lg text-headline-sm">Dr. Julian Vance</p>
+<p class="font-label-md text-label-md text-secondary">Principal &amp; Executive Director</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Our Values Bento Grid -->
+<section class="px-margin-desktop py-24 max-w-container-max mx-auto">
+<div class="text-center mb-16 space-y-2">
+<h2 class="font-display-lg text-display-lg text-primary">Our Core Values</h2>
+<p class="text-on-surface-variant max-w-2xl mx-auto">The pillars that define our culture and drive our pursuit of greatness every day.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Excellence -->
+<div class="glass-card p-8 rounded-3xl border border-outline-variant/30 flex flex-col items-start gap-4 hover:shadow-xl transition-shadow">
+<div class="w-12 h-12 bg-primary-container rounded-xl flex items-center justify-center text-on-primary-container">
+<span class="material-symbols-outlined">auto_awesome</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary">Excellence</h3>
+<p class="text-on-surface-variant">We pursue the highest standards in everything we do, from academic research to athletic performance, fostering a culture of continuous improvement.</p>
+</div>
+<!-- Integrity -->
+<div class="glass-card p-8 rounded-3xl border border-outline-variant/30 flex flex-col items-start gap-4 hover:shadow-xl transition-shadow bg-surface-container-low">
+<div class="w-12 h-12 bg-secondary-container rounded-xl flex items-center justify-center text-on-secondary-container">
+<span class="material-symbols-outlined">verified_user</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary">Integrity</h3>
+<p class="text-on-surface-variant">Honesty and ethical behavior are the foundation of our community. We teach our students the value of character and accountability.</p>
+</div>
+<!-- Innovation -->
+<div class="glass-card p-8 rounded-3xl border border-outline-variant/30 flex flex-col items-start gap-4 hover:shadow-xl transition-shadow">
+<div class="w-12 h-12 bg-tertiary-fixed rounded-xl flex items-center justify-center text-on-tertiary-fixed">
+<span class="material-symbols-outlined">lightbulb</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary">Innovation</h3>
+<p class="text-on-surface-variant">We embrace new ideas and technology, encouraging our students to think outside the box and solve complex global challenges.</p>
+</div>
+</div>
+</section>
+<!-- Faculty Grid -->
+<section class="bg-surface-container-lowest py-24 px-margin-desktop">
+<div class="max-w-container-max mx-auto">
+<div class="flex justify-between items-end mb-12">
+<div>
+<h2 class="font-display-lg text-display-lg text-primary">Our Distinguished Faculty</h2>
+<p class="text-on-surface-variant">Expert educators committed to academic mastery.</p>
+</div>
+<button class="hidden md:block text-primary font-semibold border-b-2 border-primary pb-1">View All Faculty</button>
+</div>
+<div class="grid grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Faculty member 1 -->
+<div class="group">
+<div class="aspect-square rounded-2xl overflow-hidden mb-4 relative">
+<img alt="Sarah Jenkins" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" data-alt="A close-up portrait of a female teacher in her late 30s with a warm and friendly smile. She is wearing professional smart-casual attire. The background is a soft-focus classroom with sunlight streaming in, creating a bright and inspiring academic feel with high-quality, modern aesthetics." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDmWYWuqmafA-AJBYszhnP5BGr48OyFQBkIQTRNucgZBQM5fIK4_usq3btoME1yNpD2IlOs0NKPpgP8zMu-HLSKFVITnqH4nocZSYU6AreTtcGKodjFLceOxvVOuuMknofIZ5T2Ex0L7O7tgFNw9kEcMbSLYeWMHYEbON7mpuhxYz30dRefeHUUJXWUphFBB8DX0agWRN2tdJ9qKnaZlnvykQR0hNuOiB_v-81wWZ3DBvWGvyjDKmZc5tI6gU9GZ3af3OqwrNI0Kvo">
+</div>
+<h4 class="font-headline-sm text-headline-sm text-primary">Dr. Sarah Jenkins</h4>
+<p class="text-on-surface-variant text-label-md uppercase tracking-wider">Head of Sciences</p>
+</div>
+<!-- Faculty member 2 -->
+<div class="group">
+<div class="aspect-square rounded-2xl overflow-hidden mb-4 relative">
+<img alt="Marcus Thorne" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" data-alt="A professional headshot of a male history professor in a grey tweed blazer. He has a thoughtful, intelligent expression. The lighting is sophisticated, with soft shadows and a neutral background reminiscent of a high-end university campus or private school library." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDmwEG_aIrPbRBvlVVKxtk2R2PD3zdaz_aDfJao3V4SS5Xwl2noZoUMRPlTNCX743Ot_2wa3PWhIriWMB4Rv0X66elFD4RuANArRYjUOpw_3r9wbHMeUeLngCNiD8DNb4SmzsIWj4ANGctWSsu_qK4Z6-aiKLhBD2g9bpaByG6wSnRwRl7GVwZ0zHoVUFhk-rYzVyGeJ8ZbrTGeWv988iw6vjaSHm3af4GG8YFBb5yDi7zHukR-GrBIwthJwMCRP2oQGXivd3l2EAU">
+</div>
+<h4 class="font-headline-sm text-headline-sm text-primary">Mr. Marcus Thorne</h4>
+<p class="text-on-surface-variant text-label-md uppercase tracking-wider">Department of Humanities</p>
+</div>
+<!-- Faculty member 3 -->
+<div class="group">
+<div class="aspect-square rounded-2xl overflow-hidden mb-4 relative">
+<img alt="Elena Rodriguez" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" data-alt="A professional and confident portrait of a female mathematics teacher. She is standing in a modern, glass-walled office space. The image is bright, with a cool-toned color palette and a very clean, professional aesthetic that emphasizes institutional excellence and modern educational leadership." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvZGeKB5rlnmT8l-ZpoQZBjOLcoSBptO5RVDZzbNkiAogXiuyh9oRLXztOcIzfv2IvV0_UIkDSrGqJN3YC_Jj3iKukdfguxRbX98_Opb8F9-FPmGs1n916N0-U0EoIQumU2WtCVdwwKPNA1AzKjy3ViaLqoEeMTQ4th6qH_fMtZRJjL5RcVl9piw7MzoY1h_B-6-XuYS0_V76aQmD5YW2of_s4rQ3ebzqCussEMk3oeyZRDDaKgZE68U8o66IyAm1jShQd3dpdDGU">
+</div>
+<h4 class="font-headline-sm text-headline-sm text-primary">Ms. Elena Rodriguez</h4>
+<p class="text-on-surface-variant text-label-md uppercase tracking-wider">Mathematics &amp; AI Lead</p>
+</div>
+<!-- Faculty member 4 -->
+<div class="group">
+<div class="aspect-square rounded-2xl overflow-hidden mb-4 relative">
+<img alt="David Chen" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" data-alt="A sharp, clear portrait of a male athletic director in his late 40s. He is wearing a school-branded polo shirt. The setting is an outdoor sports track with soft morning light, conveying a healthy, active, and disciplined lifestyle. The style is modern, professional, and full of high-definition detail." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA54Q_OAh04yEqDA8Dn6e4PRDRaE8b5I5UFNqI9_88wT7-jt-H5hZ6hdhAwtvK3atuz-qSKFTyUqnZyxvccKd2xnkLNFjFKcb0IzKnvAcYjdEVFKKPpevTrLzdd7DYq88UT4yZkuoYT0fXpLAub-Zz7AyuDPVSXGpsM-jclj77zBBLGosUGi5MV-lo3Fv4Bx2wW5jUlhD582nyDKdgQyvhLLcceu5ywyPKVxg9zDW2Vvu3LhH4WZsyujmlc6GWz9ixXS9cy4zbwDmc">
+</div>
+<h4 class="font-headline-sm text-headline-sm text-primary">Mr. David Chen</h4>
+<p class="text-on-surface-variant text-label-md uppercase tracking-wider">Director of Athletics</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Facilities Gallery -->
+<section class="px-margin-desktop py-24 max-w-container-max mx-auto">
+<div class="text-center mb-16">
+<h2 class="font-display-lg text-display-lg text-primary">World-Class Campus</h2>
+<p class="text-on-surface-variant">Discover the spaces where innovation and learning collide.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter h-[600px]">
+<div class="md:col-span-2 relative group rounded-3xl overflow-hidden">
+<img alt="Science Lab" class="w-full h-full object-cover group-hover:scale-105 transition duration-700" data-alt="A futuristic high school science laboratory with sleek white workstations, digital microscopes, and glass partitions. The room is flooded with bright, clean light, highlighting the premium equipment and the sterile, advanced environment. The overall mood is one of scientific discovery and high-tech academic pursuit." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC35Uyj-FSQ743JWg3pJMgr9HBscXuUtkToHI0fiWNG65lH5RLj9eCUSPZvQhzdh-KmAqQjBv3iP5GrpzjSJMWSh3NYfz9D3h4-2bb-4nvvvGyierpU7cNNNbnNVAXVaINqFHlQ6SLPxYJtaLoUv6kB2SH3F_wJGihh0j3UPcy0-AEXuZnNSP9h4k1mT6cDkQ9HwVhv9MicloP4z3W0GppsaqqTFx5PCAjlSfkUpSOR0Ih9g__FsN33BfBjgdLHspXt1jPpFRwyzug">
+<div class="absolute bottom-0 left-0 w-full p-8 bg-gradient-to-t from-black/80 to-transparent text-white">
+<h4 class="text-2xl font-bold">Quantum Science Wing</h4>
+<p class="text-sm opacity-80 uppercase tracking-widest">Research &amp; Exploration</p>
+</div>
+</div>
+<div class="grid grid-rows-2 gap-gutter">
+<div class="relative group rounded-3xl overflow-hidden">
+<img alt="Library" class="w-full h-full object-cover group-hover:scale-105 transition duration-700" data-alt="A minimalist and modern school library with floor-to-ceiling bookshelves and comfortable, ergonomic reading pods. Huge glass windows look out onto a green campus. The lighting is soft and natural, creating a serene, scholarly environment that balances traditional learning with contemporary design." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBkeubaW0QwhaiARfLoNE8ZSCi8irTN1ck6SneSNyfAS_WyiRbRJClOOkwjeXaXz7JnNT_5-cDQZUDkbT8w-Xz-5i6dhlXYbwylt8I5kft5HbdvdoMYoNk2cxjFPKLXip2xwRWwZti46kFJYSecraaoR7pQzYwANGPoTNW9R3s6kLAxpRLQZ_uHnvujfheWgLriNoyiGLqOpwp6v6HcMVrzBsbydwtsmYF4RcnthFC20_ifuaAWHxtGI-olWZ39YB2MuxsH6g1zAMc">
+<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<span class="text-white font-bold border-2 border-white px-6 py-2 rounded-full">Explore Library</span>
+</div>
+</div>
+<div class="relative group rounded-3xl overflow-hidden">
+<img alt="Sports Complex" class="w-full h-full object-cover group-hover:scale-105 transition duration-700" data-alt="A state-of-the-art indoor sports complex with a polished hardwood basketball court and large digital scoreboards. The ceiling is architectural and modern, with high-intensity floodlighting that creates a vibrant, competitive, and high-energy atmosphere consistent with top-tier athletic programs." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAm98f9EmTAYusaV0c5xiBU-0KqfERBXEB_WTcFw8JUq9Ibj4u3-dm6239Tlxrm52VWlSMru7auQbBX-dnc5jV4BmZfF3mtJnWROrAbAs4ceVKHolpLU4t24Mf7tWMXZ1rl-baAoCxMd5VIreGkYWZjA1xfjxz4051yCphLNVsSbu-DR0TYx6XPRu44Ao_Mk7goo2gOOga9iHnVKLGc0oHxMetzDfU2F39ar7qEf7G26HycaSWHvBIy38bOJfQ6tFXdgebDPmxs8pI">
+<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<span class="text-white font-bold border-2 border-white px-6 py-2 rounded-full">View Complex</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-stack-lg px-margin-desktop grid grid-cols-1 md:grid-cols-3 gap-gutter bg-primary text-on-primary">
+<div class="space-y-4">
+<div class="font-display-lg text-headline-md text-white">BFHS</div>
+<p class="text-surface-variant/80 font-body-sm">© 2024 Bright Future High School. Excellence in Education.</p>
+</div>
+<div class="flex flex-col gap-2">
+<h4 class="font-bold text-white mb-2">Quick Links</h4>
+<a class="text-surface-variant/80 hover:text-white transition-opacity font-body-sm" href="#">Privacy Policy</a>
+<a class="text-surface-variant/80 hover:text-white transition-opacity font-body-sm" href="#">Terms of Service</a>
+<a class="text-surface-variant/80 hover:text-white transition-opacity font-body-sm" href="#">Accessibility</a>
+<a class="text-surface-variant/80 hover:text-white transition-opacity font-body-sm" href="#">Contact Us</a>
+</div>
+<div class="space-y-4">
+<h4 class="font-bold text-white">Subscribe to News</h4>
+<div class="flex gap-2">
+<input class="bg-primary-container border-none rounded-lg text-white w-full focus:ring-2 focus:ring-secondary" placeholder="Email address" type="email">
+<button class="bg-secondary text-white px-4 py-2 rounded-lg hover:opacity-80 transition-opacity">Join</button>
+</div>
+</div>
+</footer>
+<script>
+        // Smooth scroll implementation or simple micro-interactions
+        document.querySelectorAll('a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                if (this.getAttribute('href').startsWith('#')) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body></html>

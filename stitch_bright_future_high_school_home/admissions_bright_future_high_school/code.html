@@ -1,0 +1,397 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Admissions | Bright Future High School</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800;900&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "inverse-primary": "#adc7f7",
+                    "on-secondary": "#ffffff",
+                    "on-tertiary": "#ffffff",
+                    "primary-container": "#1a365d",
+                    "on-secondary-fixed-variant": "#004881",
+                    "on-tertiary-fixed-variant": "#41474e",
+                    "on-tertiary-fixed": "#161c22",
+                    "surface": "#f8f9ff",
+                    "surface-variant": "#d3e4fe",
+                    "secondary": "#1960a3",
+                    "surface-tint": "#455f88",
+                    "surface-dim": "#cbdbf5",
+                    "surface-container-highest": "#d3e4fe",
+                    "background": "#f8f9ff",
+                    "outline": "#74777f",
+                    "on-error-container": "#93000a",
+                    "tertiary-fixed": "#dde3eb",
+                    "surface-container": "#e5eeff",
+                    "surface-container-lowest": "#ffffff",
+                    "tertiary": "#1b2127",
+                    "on-secondary-container": "#00477f",
+                    "on-tertiary-container": "#989fa6",
+                    "primary-fixed-dim": "#adc7f7",
+                    "outline-variant": "#c4c6cf",
+                    "surface-container-high": "#dce9ff",
+                    "error": "#ba1a1a",
+                    "secondary-container": "#7db6ff",
+                    "surface-bright": "#f8f9ff",
+                    "primary-fixed": "#d6e3ff",
+                    "on-primary": "#ffffff",
+                    "error-container": "#ffdad6",
+                    "on-background": "#0b1c30",
+                    "tertiary-fixed-dim": "#c1c7cf",
+                    "inverse-on-surface": "#eaf1ff",
+                    "on-surface": "#0b1c30",
+                    "on-secondary-fixed": "#001c38",
+                    "on-primary-container": "#86a0cd",
+                    "on-primary-fixed-variant": "#2d476f",
+                    "secondary-fixed": "#d3e4ff",
+                    "on-error": "#ffffff",
+                    "primary": "#002045",
+                    "surface-container-low": "#eff4ff",
+                    "inverse-surface": "#213145",
+                    "on-surface-variant": "#43474e",
+                    "tertiary-container": "#30363c",
+                    "on-primary-fixed": "#001b3c",
+                    "secondary-fixed-dim": "#a2c9ff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin-desktop": "40px",
+                    "stack-lg": "32px",
+                    "stack-md": "16px",
+                    "stack-sm": "8px",
+                    "unit": "4px",
+                    "margin-mobile": "16px",
+                    "gutter": "24px",
+                    "container-max": "1280px"
+            },
+            "fontFamily": {
+                    "display-lg": ["Lexend"],
+                    "body-md": ["Inter"],
+                    "label-sm": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "headline-md": ["Lexend"],
+                    "label-md": ["Inter"],
+                    "display-lg-mobile": ["Lexend"],
+                    "body-sm": ["Inter"],
+                    "headline-sm": ["Lexend"]
+            },
+            "fontSize": {
+                    "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "label-sm": ["12px", {"lineHeight": "14px", "fontWeight": "500"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "label-md": ["14px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "display-lg-mobile": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                    "headline-sm": ["20px", {"lineHeight": "28px", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .nav-link-active::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: var(--tw-secondary);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md overflow-x-hidden">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl flex justify-between items-center px-margin-desktop py-4 max-w-container-max mx-auto border-b border-outline-variant/20 shadow-sm">
+<div class="font-display-lg text-headline-sm font-bold text-primary">Bright Future High School</div>
+<div class="hidden md:flex items-center gap-gutter">
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Home</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">About</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Academics</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Student Life</a>
+<a class="font-body-md text-body-md text-secondary font-semibold border-b-2 border-secondary" href="#">Admissions</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">News</a>
+</div>
+<button class="bg-primary text-on-primary px-6 py-2 rounded-xl font-semibold hover:opacity-90 transition-opacity">Portal Login</button>
+</nav>
+<main class="mt-24">
+<!-- Hero Section -->
+<header class="relative w-full h-[512px] flex items-center justify-center overflow-hidden mb-stack-lg">
+<div class="absolute inset-0 bg-primary-container z-0">
+<img class="w-full h-full object-cover opacity-40 mix-blend-overlay" data-alt="A sunlit, wide-angle shot of a prestigious modern high school campus during golden hour. The architecture features large glass panels and clean white surfaces reflecting the warm orange light. Students are walking purposefully on landscaped paths. The overall atmosphere is academic, aspirational, and high-quality, aligning with a premium education brand." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-8aGPN2n5Qomd3oeIfZEQZrli6H1C9voyhWnpMzGAn_o8RuhNaM1G6om1tH_F-9qrkgx62fq95KEHbYCHgW9-U1GtsD7S67QAB-yAnEVLWsACjhK2cAwBKPlpg02X5nYA6W3LU4ahyDfqXiSzAyexicK_QkNZ_Inq5CennjiC9_DrH6Fx6cfzwXBaceo0RXhF65iUi7IhoZ3BLICngEW5VqBTYBeWlVxA7K8XZV1Rh8JbE8Img5FlCM-GtGY6d7HGBDmgqMXHa2g">
+</div>
+<div class="relative z-10 text-center px-margin-mobile">
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-white mb-stack-sm">Shape Your Future</h1>
+<p class="font-body-lg text-body-lg text-surface-variant max-w-2xl mx-auto">Join a community where innovation meets excellence. Our admissions process is designed to find students who are ready to lead and excel.</p>
+</div>
+</header>
+<!-- Multi-step Enrollment Process -->
+<section class="max-w-container-max mx-auto px-margin-desktop py-stack-lg">
+<div class="text-center mb-stack-lg">
+<h2 class="font-headline-md text-headline-md text-primary">Your Journey Starts Here</h2>
+<p class="text-on-surface-variant mt-2">A simple, transparent four-step process to enrollment.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter">
+<div class="glass-card p-stack-md rounded-[2rem] shadow-sm relative group hover:shadow-md transition-shadow">
+<div class="w-12 h-12 bg-primary-container text-on-primary-container rounded-full flex items-center justify-center mb-stack-md font-bold text-xl">1</div>
+<span class="material-symbols-outlined text-secondary text-4xl mb-stack-sm" data-icon="edit_note">edit_note</span>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-stack-sm">Online Application</h3>
+<p class="text-body-sm text-on-surface-variant">Complete the initial interest form and provide basic student details through our secure portal.</p>
+</div>
+<div class="glass-card p-stack-md rounded-[2rem] shadow-sm relative group hover:shadow-md transition-shadow">
+<div class="w-12 h-12 bg-primary-container text-on-primary-container rounded-full flex items-center justify-center mb-stack-md font-bold text-xl">2</div>
+<span class="material-symbols-outlined text-secondary text-4xl mb-stack-sm" data-icon="cloud_upload">cloud_upload</span>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-stack-sm">Document Review</h3>
+<p class="text-body-sm text-on-surface-variant">Upload transcripts, recommendation letters, and identification for our admissions board to review.</p>
+</div>
+<div class="glass-card p-stack-md rounded-[2rem] shadow-sm relative group hover:shadow-md transition-shadow">
+<div class="w-12 h-12 bg-primary-container text-on-primary-container rounded-full flex items-center justify-center mb-stack-md font-bold text-xl">3</div>
+<span class="material-symbols-outlined text-secondary text-4xl mb-stack-sm" data-icon="groups">groups</span>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-stack-sm">Personal Interview</h3>
+<p class="text-body-sm text-on-surface-variant">Meet with our faculty to discuss academic goals and see if BFHS is the right fit for your ambitions.</p>
+</div>
+<div class="glass-card p-stack-md rounded-[2rem] shadow-sm relative group hover:shadow-md transition-shadow">
+<div class="w-12 h-12 bg-primary-container text-on-primary-container rounded-full flex items-center justify-center mb-stack-md font-bold text-xl">4</div>
+<span class="material-symbols-outlined text-secondary text-4xl mb-stack-sm" data-icon="assignment_turned_in">assignment_turned_in</span>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-stack-sm">Final Enrollment</h3>
+<p class="text-body-sm text-on-surface-variant">Receive your acceptance, pay the enrollment fee, and get your student orientation package.</p>
+</div>
+</div>
+</section>
+<!-- Requirements & Tuition Bento Grid -->
+<section class="bg-surface-container-low py-stack-lg">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-gutter">
+<!-- Requirements Checklist -->
+<div class="lg:col-span-1 bg-white p-stack-md rounded-[2rem] shadow-sm">
+<h3 class="font-headline-md text-headline-md text-primary mb-stack-md">Requirements</h3>
+<ul class="space-y-4">
+<li class="flex items-start gap-stack-sm">
+<span class="material-symbols-outlined text-secondary" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<div>
+<p class="font-bold text-on-surface">Official Transcripts</p>
+<p class="text-body-sm text-on-surface-variant">Past 3 years of academic performance records.</p>
+</div>
+</li>
+<li class="flex items-start gap-stack-sm">
+<span class="material-symbols-outlined text-secondary" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<div>
+<p class="font-bold text-on-surface">Standardized Test Scores</p>
+<p class="text-body-sm text-on-surface-variant">Recent SAT, ACT, or equivalent international scores.</p>
+</div>
+</li>
+<li class="flex items-start gap-stack-sm">
+<span class="material-symbols-outlined text-secondary" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<div>
+<p class="font-bold text-on-surface">Two Recommendation Letters</p>
+<p class="text-body-sm text-on-surface-variant">From a core subject teacher and a counselor.</p>
+</div>
+</li>
+<li class="flex items-start gap-stack-sm">
+<span class="material-symbols-outlined text-secondary" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<div>
+<p class="font-bold text-on-surface">Personal Statement</p>
+<p class="text-body-sm text-on-surface-variant">A 500-word essay on your academic journey.</p>
+</div>
+</li>
+</ul>
+</div>
+<!-- Tuition Table -->
+<div class="lg:col-span-2 bg-white p-stack-md rounded-[2rem] shadow-sm flex flex-col">
+<h3 class="font-headline-md text-headline-md text-primary mb-stack-md">Tuition &amp; Fees (2024-25)</h3>
+<div class="overflow-x-auto">
+<table class="w-full text-left">
+<thead>
+<tr class="border-b border-outline-variant">
+<th class="py-4 font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Fee Description</th>
+<th class="py-4 font-label-md text-label-md text-on-surface-variant uppercase tracking-wider text-right">Amount (USD)</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant/30">
+<tr>
+<td class="py-4 text-on-surface font-medium">Application Fee (Non-refundable)</td>
+<td class="py-4 text-on-surface text-right">$150</td>
+</tr>
+<tr>
+<td class="py-4 text-on-surface font-medium">Annual Tuition (Standard)</td>
+<td class="py-4 text-on-surface text-right">$22,500</td>
+</tr>
+<tr>
+<td class="py-4 text-on-surface font-medium">Technology &amp; Resource Fee</td>
+<td class="py-4 text-on-surface text-right">$1,200</td>
+</tr>
+<tr>
+<td class="py-4 text-on-surface font-medium">Extracurricular &amp; Athletics</td>
+<td class="py-4 text-on-surface text-right">$850</td>
+</tr>
+<tr class="bg-surface-container-highest/20">
+<td class="py-4 text-primary font-bold">Total Estimated Annual Cost</td>
+<td class="py-4 text-primary font-bold text-right">$24,700</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="mt-auto pt-stack-md text-body-sm text-on-surface-variant italic">Note: Financial aid and scholarships are available for eligible candidates.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Online Application Form -->
+<section class="max-w-container-max mx-auto px-margin-desktop py-stack-lg" id="apply-now">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-gutter items-center">
+<div class="order-2 lg:order-1">
+<div class="glass-card p-10 rounded-[2rem] shadow-lg border border-white">
+<h2 class="font-headline-md text-headline-md text-primary mb-stack-md">Apply Online</h2>
+<form class="space-y-stack-md" onsubmit="event.preventDefault(); alert('Application submitted successfully!')">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-stack-md">
+<div class="flex flex-col gap-unit">
+<label class="text-label-md text-on-surface-variant ml-2">Student First Name</label>
+<input class="bg-surface-container-low border-none rounded-xl p-4 focus:ring-2 focus:ring-secondary transition-all" placeholder="John" required="" type="text">
+</div>
+<div class="flex flex-col gap-unit">
+<label class="text-label-md text-on-surface-variant ml-2">Student Last Name</label>
+<input class="bg-surface-container-low border-none rounded-xl p-4 focus:ring-2 focus:ring-secondary transition-all" placeholder="Doe" required="" type="text">
+</div>
+</div>
+<div class="flex flex-col gap-unit">
+<label class="text-label-md text-on-surface-variant ml-2">Guardian Email Address</label>
+<input class="bg-surface-container-low border-none rounded-xl p-4 focus:ring-2 focus:ring-secondary transition-all" placeholder="guardian@example.com" required="" type="email">
+</div>
+<div class="flex flex-col gap-unit">
+<label class="text-label-md text-on-surface-variant ml-2">Grade Applying For</label>
+<select class="bg-surface-container-low border-none rounded-xl p-4 focus:ring-2 focus:ring-secondary transition-all">
+<option>Grade 9</option>
+<option>Grade 10</option>
+<option>Grade 11</option>
+<option>Grade 12</option>
+</select>
+</div>
+<div class="flex flex-col gap-unit">
+<label class="text-label-md text-on-surface-variant ml-2">Additional Comments</label>
+<textarea class="bg-surface-container-low border-none rounded-xl p-4 focus:ring-2 focus:ring-secondary transition-all" placeholder="Tell us anything else you'd like us to know..." rows="3"></textarea>
+</div>
+<button class="w-full bg-primary text-on-primary py-4 rounded-xl font-bold text-body-lg hover:bg-secondary transition-colors shadow-md" type="submit">Submit Application</button>
+</form>
+</div>
+</div>
+<div class="order-1 lg:order-2 space-y-stack-md">
+<span class="bg-secondary/10 text-secondary px-4 py-1 rounded-full font-bold text-label-sm">ENROLLMENT OPEN</span>
+<h2 class="font-display-lg text-headline-md md:text-display-lg text-primary leading-tight">Start Your Academic Excellence Journey.</h2>
+<p class="text-body-lg text-on-surface-variant">Our application takes less than 10 minutes to complete. Start today and our admissions team will contact you within 48 hours for the next steps.</p>
+<div class="flex gap-stack-md">
+<div class="flex -space-x-3 overflow-hidden">
+<img class="inline-block h-10 w-10 rounded-full ring-2 ring-white" data-alt="Close-up portrait of a smiling young African American female student in a modern school setting with soft, natural lighting. She wears a clean, white academic shirt, reflecting a bright and positive mood within a high-end educational environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6aeRPTJ264M_w0NCA3gRkT_ipgO0xxA2k3oP-s9V2ZeEMHDKMLB6a82LFS1FFdmZwpRtd6aWgI5zoLLuDmpoHbFz3zIN2MwJWQSmelN2e-KoEPI4PJhYVP1N_4QBAMQ4l8uSnsJohfsIzfJ3F1-YapDx-4RpN3AlJzPOMhbXp17IX8dIj7pbEVFIp-3Q3uPY8k2vVWSUjT9COk2pqFmBt6DsFTnt6QkzJL44x0aD6h7NbGdJYvQx1RXtNEIJohiiRTmYHqqhoyTQ">
+<img class="inline-block h-10 w-10 rounded-full ring-2 ring-white" data-alt="A candid photo of a diverse group of high school students laughing together in a bright, modern school hallway. The lighting is crisp and high-key, emphasizing the clean white walls and polished floors. The image captures a sense of community, friendship, and positive energy characteristic of a premium school." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBc6iYIuKWNPbMHtmFjuT0M-LPai0SltP0RIDwLUSQH9GIW-2rgsTlEbMuERDt_28KY-eTu-z8cQgiyh06CKujnYf8DPwMJZZ84rLQ8Zz1ejb2OuJ3DJ7UaoTNXfpdwHmpOqOZ3-Gafepo70v_LJ0gtIGDMt-U9nIFgaIxOJr3UzOsyvCqiyzGo38zHSQMH4NZfLLReMgKDYvdT4w5h2eymck8gxOAb1yZaZfBDt0Xz5-GTaavBhrMAl02p3vJmffBHEBBnOj9Fmh8">
+<img class="inline-block h-10 w-10 rounded-full ring-2 ring-white" data-alt="A portrait of a confident male student holding a laptop in a bright, technology-focused classroom. He is dressed in business-casual attire. The background is slightly blurred to focus on his ambitious expression, with soft, professional lighting creating an inspiring, corporate modern aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDBL-0u3587nHsUpGZ7mAZn5mmirvECxFtcBvUUkYeFPkVa6duhPpf-06KBnQsuz8l7t5sPQCwX5WNCs-QkxuP2BkgVCZ9faYgb3yHMAOlI_JbIAFrgN057sKv_6ji36gNYkTmrMf7MfPD_77eKMdpIxStXVqDPzQzAyjssoUlh5_X5X_HM9UsMFAwrkGdE13A7A2-Y_-8wRw6OTJaJpQEah6YU5-I76Y89jyUEYJA66QHH5ag1fjQzdy1p2FkGc8RmsOWcKeTyZEo">
+</div>
+<div class="text-sm font-medium text-on-surface-variant">
+<span class="text-primary font-bold block">1,200+ Applicants</span>
+                            Last year alone
+                        </div>
+</div>
+</div>
+</div>
+</section>
+<!-- FAQ Section -->
+<section class="bg-surface-container-high py-stack-lg">
+<div class="max-w-3xl mx-auto px-margin-desktop">
+<div class="text-center mb-stack-lg">
+<h2 class="font-headline-md text-headline-md text-primary">Frequently Asked Questions</h2>
+</div>
+<div class="space-y-4">
+<div class="bg-white rounded-2xl p-6 shadow-sm cursor-pointer group" onclick="toggleFaq(this)">
+<div class="flex justify-between items-center">
+<h4 class="font-bold text-on-surface">When is the application deadline for 2025?</h4>
+<span class="material-symbols-outlined transition-transform group-[.active]:rotate-180" data-icon="expand_more">expand_more</span>
+</div>
+<div class="mt-4 text-on-surface-variant hidden group-[.active]:block">
+                            The priority application deadline for the Fall 2025 semester is March 15th, 2025. Rolling admissions will continue thereafter until all seats are filled.
+                        </div>
+</div>
+<div class="bg-white rounded-2xl p-6 shadow-sm cursor-pointer group" onclick="toggleFaq(this)">
+<div class="flex justify-between items-center">
+<h4 class="font-bold text-on-surface">Are there academic scholarships available?</h4>
+<span class="material-symbols-outlined transition-transform group-[.active]:rotate-180" data-icon="expand_more">expand_more</span>
+</div>
+<div class="mt-4 text-on-surface-variant hidden group-[.active]:block">
+                            Yes, Bright Future High School offers Merit Scholarships for top-performing students and Financial Need grants. Over 30% of our student body receives some form of financial assistance.
+                        </div>
+</div>
+<div class="bg-white rounded-2xl p-6 shadow-sm cursor-pointer group" onclick="toggleFaq(this)">
+<div class="flex justify-between items-center">
+<h4 class="font-bold text-on-surface">What is the average class size at BFHS?</h4>
+<span class="material-symbols-outlined transition-transform group-[.active]:rotate-180" data-icon="expand_more">expand_more</span>
+</div>
+<div class="mt-4 text-on-surface-variant hidden group-[.active]:block">
+                            To maintain academic excellence, we maintain a student-to-teacher ratio of 12:1. The average class size is approximately 18 students.
+                        </div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-stack-lg px-margin-desktop grid grid-cols-1 md:grid-cols-3 gap-gutter bg-primary text-on-primary">
+<div class="flex flex-col gap-stack-sm">
+<div class="font-display-lg text-headline-md text-white">BFHS</div>
+<p class="text-surface-variant/80 text-body-sm max-w-xs">Building the leaders of tomorrow through innovation, empathy, and academic rigor.</p>
+</div>
+<div class="flex flex-col gap-stack-sm">
+<h5 class="font-bold text-white mb-2">Quick Links</h5>
+<div class="flex flex-col gap-2">
+<a class="text-surface-variant/80 hover:text-white transition-opacity text-body-sm" href="#">Privacy Policy</a>
+<a class="text-surface-variant/80 hover:text-white transition-opacity text-body-sm" href="#">Terms of Service</a>
+<a class="text-surface-variant/80 hover:text-white transition-opacity text-body-sm" href="#">Accessibility</a>
+<a class="text-surface-variant/80 hover:text-white transition-opacity text-body-sm" href="#">Contact Us</a>
+</div>
+</div>
+<div class="flex flex-col gap-stack-sm">
+<h5 class="font-bold text-white mb-2">Stay Connected</h5>
+<p class="text-surface-variant/80 text-body-sm mb-4">Subscribe for school updates and admission alerts.</p>
+<div class="flex gap-2">
+<input class="bg-white/10 border-none rounded-lg px-4 py-2 w-full text-white placeholder:text-white/40 focus:ring-1 focus:ring-secondary" placeholder="Email address" type="email">
+<button class="bg-secondary text-white px-4 py-2 rounded-lg font-bold hover:bg-secondary-container transition-colors">Join</button>
+</div>
+</div>
+<div class="md:col-span-3 pt-stack-lg mt-stack-lg border-t border-white/10 text-center">
+<p class="text-surface-variant/80 text-body-sm">© 2024 Bright Future High School. Excellence in Education.</p>
+</div>
+</footer>
+<script>
+        function toggleFaq(element) {
+            element.classList.toggle('active');
+        }
+
+        // Smooth scroll interaction for anchors
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body></html>

@@ -1,0 +1,405 @@
+<!DOCTYPE html><html class="light" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Bright Future High School | Home</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;600;700;900&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "inverse-primary": "#adc7f7",
+                      "on-secondary": "#ffffff",
+                      "on-tertiary": "#ffffff",
+                      "primary-container": "#1a365d",
+                      "on-secondary-fixed-variant": "#004881",
+                      "on-tertiary-fixed-variant": "#41474e",
+                      "on-tertiary-fixed": "#161c22",
+                      "surface": "#f8f9ff",
+                      "surface-variant": "#d3e4fe",
+                      "secondary": "#1960a3",
+                      "surface-tint": "#455f88",
+                      "surface-dim": "#cbdbf5",
+                      "surface-container-highest": "#d3e4fe",
+                      "background": "#f8f9ff",
+                      "outline": "#74777f",
+                      "on-error-container": "#93000a",
+                      "tertiary-fixed": "#dde3eb",
+                      "surface-container": "#e5eeff",
+                      "surface-container-lowest": "#ffffff",
+                      "tertiary": "#1b2127",
+                      "on-secondary-container": "#00477f",
+                      "on-tertiary-container": "#989fa6",
+                      "primary-fixed-dim": "#adc7f7",
+                      "outline-variant": "#c4c6cf",
+                      "surface-container-high": "#dce9ff",
+                      "error": "#ba1a1a",
+                      "secondary-container": "#7db6ff",
+                      "surface-bright": "#f8f9ff",
+                      "primary-fixed": "#d6e3ff",
+                      "on-primary": "#ffffff",
+                      "error-container": "#ffdad6",
+                      "on-background": "#0b1c30",
+                      "tertiary-fixed-dim": "#c1c7cf",
+                      "inverse-on-surface": "#eaf1ff",
+                      "on-surface": "#0b1c30",
+                      "on-secondary-fixed": "#001c38",
+                      "on-primary-container": "#86a0cd",
+                      "on-primary-fixed-variant": "#2d476f",
+                      "secondary-fixed": "#d3e4ff",
+                      "on-error": "#ffffff",
+                      "primary": "#002045",
+                      "surface-container-low": "#eff4ff",
+                      "inverse-surface": "#213145",
+                      "on-surface-variant": "#43474e",
+                      "tertiary-container": "#30363c",
+                      "on-primary-fixed": "#001b3c",
+                      "secondary-fixed-dim": "#a2c9ff"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "margin-desktop": "40px",
+                      "stack-lg": "32px",
+                      "stack-md": "16px",
+                      "stack-sm": "8px",
+                      "unit": "4px",
+                      "margin-mobile": "16px",
+                      "gutter": "24px",
+                      "container-max": "1280px"
+              },
+              "fontFamily": {
+                      "display-lg": ["Lexend"],
+                      "body-md": ["Inter"],
+                      "label-sm": ["Inter"],
+                      "body-lg": ["Inter"],
+                      "headline-md": ["Lexend"],
+                      "label-md": ["Inter"],
+                      "display-lg-mobile": ["Lexend"],
+                      "body-sm": ["Inter"],
+                      "headline-sm": ["Lexend"]
+              },
+              "fontSize": {
+                      "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                      "label-sm": ["12px", {"lineHeight": "14px", "fontWeight": "500"}],
+                      "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                      "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                      "label-md": ["14px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                      "display-lg-mobile": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                      "headline-sm": ["20px", {"lineHeight": "28px", "fontWeight": "600"}]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+        .glass-effect {
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            background: rgba(255, 255, 255, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .text-shadow-sm {
+            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-surface font-body-md text-on-surface">
+<!-- TopNavBar (Shared Component) -->
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-margin-desktop py-4 max-w-container-max mx-auto bg-surface/80 backdrop-blur-xl border-b border-outline-variant/20 shadow-sm">
+<div class="font-display-lg text-headline-sm font-bold text-primary">Bright Future High School</div>
+<nav class="hidden md:flex items-center gap-gutter">
+<a class="font-body-md text-body-md text-secondary font-semibold border-b-2 border-secondary" href="#">Home</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary hover:bg-surface-container/50 transition-colors duration-200" href="#">About</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary hover:bg-surface-container/50 transition-colors duration-200" href="#">Academics</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary hover:bg-surface-container/50 transition-colors duration-200" href="#">Student Life</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary hover:bg-surface-container/50 transition-colors duration-200" href="#">Admissions</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary hover:bg-surface-container/50 transition-colors duration-200" href="#">News</a>
+</nav>
+<button class="bg-primary text-white px-6 py-2 rounded-lg font-label-md hover:opacity-90 transition-all scale-95 duration-150">Portal Login</button>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative h-screen flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0">
+<img alt="Campus" class="w-full h-full object-cover" data-alt="A sprawling, ultra-modern school campus with glass-walled architecture reflecting a bright, clear blue sky. Students are seen walking and talking on lush green manicured lawns under the warm, golden glow of a late afternoon sun. The scene captures a sense of academic prestige and architectural brilliance, using a clean, light-mode palette with deep navy accents and soft natural lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbDPLpM5ZeGtka9_3slegAbQlTxCL8JeGynaeM_L3v4_4CitTYwBI1j-zVD7plhiOiDLIs8u3u5pJCb2_AFM3Q-XDn8cVBJuZWedx8xIy6wLozcqZSQ6UYh6XMu-IdsLD3LaU6LetMXaNi-WuHoWiEJq26-iNzrOVsv-upMo2mL5LGDBOlAxE7k4XrKCu51MF1SJF4DSbYVVxep0ECw2opBbMa5V-Jfi0qUHxCeErqBGgk13cR7IJ_1sSpbQKuuwdcPX7zDmNVn2g">
+<div class="absolute inset-0 bg-gradient-to-r from-primary/60 to-transparent"></div>
+</div>
+<div class="relative z-10 text-center px-margin-mobile md:px-0">
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-white mb-stack-md text-shadow-sm">
+                    Empowering Minds, <br><span class="text-secondary-container">Shaping Futures</span>
+</h1>
+<p class="text-white/90 text-body-lg max-w-2xl mx-auto mb-stack-lg">
+                    Discover a community where innovation meets tradition, and every student is equipped with the tools to lead in a changing world.
+                </p>
+<div class="flex flex-col md:flex-row gap-gutter justify-center">
+<button class="bg-primary text-white px-8 py-4 rounded-xl font-headline-sm hover:translate-y-[-2px] transition-transform shadow-lg">Enroll Now</button>
+<button class="glass-effect text-primary-container px-8 py-4 rounded-xl font-headline-sm hover:bg-white/90 transition-all">Explore Programs</button>
+</div>
+</div>
+<!-- Scroll Indicator -->
+<div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
+<span class="material-symbols-outlined text-white text-4xl">keyboard_double_arrow_down</span>
+</div>
+</section>
+<!-- Statistics Section (Bento Style) -->
+<section class="py-24 px-margin-desktop max-w-container-max mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter">
+<div class="bg-white p-8 rounded-[2rem] shadow-[0px_4px_20px_rgba(0,0,0,0.05)] border border-outline-variant/30 flex flex-col items-center text-center hover:translate-y-[-4px] transition-transform">
+<div class="w-16 h-16 bg-surface-container rounded-full flex items-center justify-center mb-stack-md">
+<span class="material-symbols-outlined text-primary text-3xl">groups</span>
+</div>
+<h3 class="font-display-lg text-headline-md text-primary">2,500+</h3>
+<p class="text-on-surface-variant font-label-md">Students</p>
+</div>
+<div class="bg-white p-8 rounded-[2rem] shadow-[0px_4px_20px_rgba(0,0,0,0.05)] border border-outline-variant/30 flex flex-col items-center text-center hover:translate-y-[-4px] transition-transform">
+<div class="w-16 h-16 bg-surface-container rounded-full flex items-center justify-center mb-stack-md">
+<span class="material-symbols-outlined text-primary text-3xl">school</span>
+</div>
+<h3 class="font-display-lg text-headline-md text-primary">150+</h3>
+<p class="text-on-surface-variant font-label-md">Teachers</p>
+</div>
+<div class="bg-white p-8 rounded-[2rem] shadow-[0px_4px_20px_rgba(0,0,0,0.05)] border border-outline-variant/30 flex flex-col items-center text-center hover:translate-y-[-4px] transition-transform">
+<div class="w-16 h-16 bg-surface-container rounded-full flex items-center justify-center mb-stack-md">
+<span class="material-symbols-outlined text-primary text-3xl">meeting_room</span>
+</div>
+<h3 class="font-display-lg text-headline-md text-primary">50+</h3>
+<p class="text-on-surface-variant font-label-md">Classrooms</p>
+</div>
+<div class="bg-white p-8 rounded-[2rem] shadow-[0px_4px_20px_rgba(0,0,0,0.05)] border border-outline-variant/30 flex flex-col items-center text-center hover:translate-y-[-4px] transition-transform">
+<div class="w-16 h-16 bg-surface-container rounded-full flex items-center justify-center mb-stack-md">
+<span class="material-symbols-outlined text-primary text-3xl">verified</span>
+</div>
+<h3 class="font-display-lg text-headline-md text-primary">98%</h3>
+<p class="text-on-surface-variant font-label-md">Graduation Rate</p>
+</div>
+</div>
+</section>
+<!-- Featured Programs -->
+<section class="py-24 bg-surface-container-low">
+<div class="px-margin-desktop max-w-container-max mx-auto">
+<div class="mb-stack-lg">
+<h2 class="font-display-lg text-headline-md md:text-display-lg text-primary mb-stack-sm">Academic Excellence</h2>
+<p class="text-on-surface-variant text-body-lg">Programs tailored for tomorrow's leaders.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Science Card -->
+<div class="group relative overflow-hidden rounded-[2rem] bg-white shadow-md border border-outline-variant/20">
+<div class="h-64 overflow-hidden">
+<img alt="Science Program" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A high-tech science laboratory where students in lab coats are collaborating around a robotic arm and advanced computer monitors displaying DNA sequences. The lighting is crisp and sterile, predominantly cool whites and deep blues, emphasizing a high-performance, professional research environment. The style is modern, sleek, and intellectually stimulating, capturing academic excellence." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDmh8RkA3A52KjmSXzv8pYxmsrFPMRlmOor0jG_APUYAGA1jAZJskpuRSWUjIHJflNPniVXNTslydg-ACiTVRklN9og8mUVuNMkh2blvY-uqthCy17MRIIPoWjbbnp0Ra-mrez4NJ-2Ep_DnkzMt7XQ9X9ZYh3YLEc4LAyNmZlw2nqJ5MzcR77h5IMhRfPYz7Tp7GseiK7jmTjCq8ous9R-4VByfAvRhF_jdBahLt-jWkReE1QgBK8M3MU0QW2jZjNqC4OSfcQHld8">
+</div>
+<div class="p-8">
+<div class="flex justify-between items-start mb-stack-sm">
+<h3 class="font-headline-md text-primary">Science &amp; STEM</h3>
+<span class="material-symbols-outlined text-secondary">biotech</span>
+</div>
+<p class="text-body-md text-on-surface-variant mb-stack-md">Cutting-edge laboratories and robotics programs preparing students for the technological frontier.</p>
+<button class="text-secondary font-label-md flex items-center gap-2 group-hover:translate-x-1 transition-transform">
+                                Explore Curriculum <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Arts Card -->
+<div class="group relative overflow-hidden rounded-[2rem] bg-white shadow-md border border-outline-variant/20">
+<div class="h-64 overflow-hidden">
+<img alt="Arts Program" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A vibrant, sun-drenched art studio filled with large canvases and students engaged in various creative pursuits from oil painting to digital design. The room is airy with high ceilings and large windows letting in soft, natural morning light. The color palette is diverse but maintains the clean light-mode aesthetic of the school, with a focus on creativity and personal expression." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBIhgLXLAfcClVA-jsh7fY2LTKxoM1rmPFVxM5ZbMVN5htbjMF90QoS6_pFdclIe6qpGVR2ogfKXogLcWQjSaLYNkq3G9kOgL_X23azHSNQX-KOlGMc60IU76ZAkFEvEKtTGSRZG3Jj4IjjRyei9g0zN66EL8Rfd8Iiq3qvHBJK1ONjq2EAbVvbu18TecWv7SUnlmwxkkH_NVFzqrfzFDz5vIYNwA5ejZQijQoN1EkjFLTzNVAPms7tnJDCMMzT7XJfyEZEzuMhTlA">
+</div>
+<div class="p-8">
+<div class="flex justify-between items-start mb-stack-sm">
+<h3 class="font-headline-md text-primary">Creative Arts</h3>
+<span class="material-symbols-outlined text-secondary">palette</span>
+</div>
+<p class="text-body-md text-on-surface-variant mb-stack-md">From classical painting to digital media, nurture your creative voice in our state-of-the-art studios.</p>
+<button class="text-secondary font-label-md flex items-center gap-2 group-hover:translate-x-1 transition-transform">
+                                Explore Curriculum <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Humanities Card -->
+<div class="group relative overflow-hidden rounded-[2rem] bg-white shadow-md border border-outline-variant/20">
+<div class="h-64 overflow-hidden">
+<img alt="Humanities Program" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A modern library setting where students are engaged in a seminar discussion around a round wooden table. Soft, warm lighting illuminates bookshelves in the background and modern ergonomic chairs. The atmosphere is quiet, scholarly, and collaborative, with a focus on deep thought and social engagement. The style is clean, high-end, and inviting, with navy blue and cream tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4cd2ezSk6lhvHm4rXjleVago5hw9_NZ-qR36bKHsZQphY1vULTza_5mRZQCL3ONJcM-cW3iqjhq1tpoUOJnIfxV3OJgiLKvlnsVbSmTmWnczULnGl1HaeeQli6pAvVLfGD5DZecsUFC1i1A0I6DOC3Byuiykf8Y7XQ7YKqaQSYUA3vPS_jNLEVrtlc36R9Tg-f1Y2mVqHOBEPq8IqkVq4szCbium4_sCm9slmm-tQZVgRncM7AQIpLQAvbYehX0Io0BBhh9uMzyM">
+</div>
+<div class="p-8">
+<div class="flex justify-between items-start mb-stack-sm">
+<h3 class="font-headline-md text-primary">Humanities</h3>
+<span class="material-symbols-outlined text-secondary">menu_book</span>
+</div>
+<p class="text-body-md text-on-surface-variant mb-stack-md">Exploring literature, history, and social sciences to develop critical thinking and global awareness.</p>
+<button class="text-secondary font-label-md flex items-center gap-2 group-hover:translate-x-1 transition-transform">
+                                Explore Curriculum <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Events and Testimonials -->
+<section class="py-24 px-margin-desktop max-w-container-max mx-auto overflow-hidden">
+<div class="flex flex-col lg:flex-row gap-gutter">
+<!-- Upcoming Events -->
+<div class="lg:w-1/2">
+<h2 class="font-headline-md text-headline-md text-primary mb-stack-lg">Upcoming Events</h2>
+<div class="space-y-stack-md">
+<div class="flex gap-stack-md p-stack-md rounded-2xl hover:bg-surface-container transition-colors cursor-pointer group">
+<div class="bg-primary-container text-white w-16 h-16 rounded-xl flex flex-col items-center justify-center shrink-0">
+<span class="text-label-sm uppercase opacity-80">Oct</span>
+<span class="font-bold text-headline-sm">15</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-on-surface group-hover:text-primary transition-colors">Annual Science Fair</h4>
+<p class="text-body-sm text-on-surface-variant">Main Campus Hall • 09:00 AM</p>
+</div>
+</div>
+<div class="flex gap-stack-md p-stack-md rounded-2xl hover:bg-surface-container transition-colors cursor-pointer group">
+<div class="bg-secondary-container text-primary w-16 h-16 rounded-xl flex flex-col items-center justify-center shrink-0">
+<span class="text-label-sm uppercase opacity-80">Oct</span>
+<span class="font-bold text-headline-sm">22</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-on-surface group-hover:text-primary transition-colors">Parent-Teacher Conference</h4>
+<p class="text-body-sm text-on-surface-variant">Online / Zoom • 04:00 PM</p>
+</div>
+</div>
+<div class="flex gap-stack-md p-stack-md rounded-2xl hover:bg-surface-container transition-colors cursor-pointer group">
+<div class="bg-primary-container text-white w-16 h-16 rounded-xl flex flex-col items-center justify-center shrink-0">
+<span class="text-label-sm uppercase opacity-80">Nov</span>
+<span class="font-bold text-headline-sm">05</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-on-surface group-hover:text-primary transition-colors">Winter Sports Gala</h4>
+<p class="text-body-sm text-on-surface-variant">Athletic Complex • 02:00 PM</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Testimonials Carousel (Simple Interaction) -->
+<div class="lg:w-1/2">
+<h2 class="font-headline-md text-headline-md text-primary mb-stack-lg">Voices of BFHS</h2>
+<div class="glass-effect p-12 rounded-[2rem] relative">
+<div class="transition-opacity duration-300" id="testimonial-container">
+<p class="text-body-lg text-primary italic mb-stack-lg">"The interdisciplinary approach at Bright Future allowed me to merge my passion for environmental science with community leadership. I feel truly prepared for university."</p>
+<div class="flex items-center gap-stack-md">
+<img alt="Student" class="w-12 h-12 rounded-full border-2 border-primary" data-alt="A portrait of a confident teenage student with a warm, genuine smile. They are wearing a navy blue school blazer with the school emblem. The background is a soft-focus campus library, with natural light catching the side of their face, creating a professional yet approachable look in a light-mode educational setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNs_STsgMUjnalkzypBBilq9Aw9_Uue_FoUzRmaEfwIXldvJ0W4sAWnabSFQEA5-jL-xK7P_LwC74C1w8pshPCGHU46K9GhIdpCh7PCyaSQokQg1Jqlt6wuaj7HRydgGQ5oHrdj5MeR8W3u0O-3BqCf3Vu4reCb0ldfVXXjcomzTd4d9_kjFiLYznR5jq8yyhVOPWGRHSaoyCJwZMefHbC_LemWO5vuNk-k7Sq1cokU3AuMHeKDpRdTa34ZoA-x74-1AgXUuguD40">
+<div>
+<h5 class="font-headline-sm text-primary">Sarah Jenkins</h5>
+<p class="text-label-sm text-on-surface-variant">Class of 2024</p>
+</div>
+</div>
+</div>
+<div class="mt-stack-lg flex gap-stack-sm">
+<button class="w-10 h-10 rounded-full border border-primary flex items-center justify-center hover:bg-primary hover:text-white transition-colors">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="w-10 h-10 rounded-full border border-primary flex items-center justify-center hover:bg-primary hover:text-white transition-colors">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="py-24 bg-primary text-white">
+<div class="px-margin-desktop max-w-container-max mx-auto grid grid-cols-1 lg:grid-cols-2 gap-gutter items-center">
+<div>
+<h2 class="font-display-lg text-headline-md md:text-display-lg mb-stack-md">Get in Touch</h2>
+<p class="text-white/80 text-body-lg mb-stack-lg">Have questions about admissions or our programs? Our team is here to help you navigate your journey.</p>
+<div class="space-y-stack-md mb-stack-lg">
+<div class="flex items-center gap-stack-md">
+<span class="material-symbols-outlined text-secondary-container">location_on</span>
+<span class="text-body-md">123 Academic Way, Education City, ED 56789</span>
+</div>
+<div class="flex items-center gap-stack-md">
+<span class="material-symbols-outlined text-secondary-container">call</span>
+<span class="text-body-md">+1 (555) 000-1234</span>
+</div>
+<div class="flex items-center gap-stack-md">
+<span class="material-symbols-outlined text-secondary-container">mail</span>
+<span class="text-body-md">admissions@bfhs.edu</span>
+</div>
+</div>
+<form class="space-y-stack-sm max-w-md">
+<input class="w-full bg-white/10 border-0 rounded-xl px-4 py-3 placeholder:text-white/50 focus:ring-2 focus:ring-secondary-container transition-all" placeholder="Full Name" type="text">
+<input class="w-full bg-white/10 border-0 rounded-xl px-4 py-3 placeholder:text-white/50 focus:ring-2 focus:ring-secondary-container transition-all" placeholder="Email Address" type="email">
+<textarea class="w-full bg-white/10 border-0 rounded-xl px-4 py-3 placeholder:text-white/50 focus:ring-2 focus:ring-secondary-container transition-all" placeholder="Message" rows="3"></textarea>
+<button class="w-full bg-secondary-container text-primary font-bold py-3 rounded-xl hover:opacity-90 transition-opacity">Send Message</button>
+</form>
+</div>
+<div class="h-[400px] lg:h-full rounded-[2rem] overflow-hidden shadow-2xl relative">
+<!-- Map Placeholder -->
+<div class="absolute inset-0 bg-surface-variant flex items-center justify-center">
+<img alt="Campus Map" class="w-full h-full object-cover grayscale opacity-50" data-location="San Francisco" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAt55uiT3WthK4XjV1Vf95Q0CGK5qOTTe6DdAcWJsI6VWfM_q4OjjGI4XmDlnMrUjoDT5saWsrcCP-qSVx2g0F_c8lAYE94UUuJTGyLtymU-m0i-Ec2GIindw7EjdkQESYqlorHdLrXvQZnlncH5fSmMOD2xyILDahFkLIrfGzvZChNfFxfsIFtS78wllo6fu_twNyaHrFOjplQBXEN3n4cNAzSAZp5u1a2y5DmmdZQhvOEi552Rh2vn_09tGVCv383w8reoE0M_Kk">
+<div class="absolute glass-effect p-6 rounded-2xl text-primary text-center">
+<span class="material-symbols-outlined text-4xl mb-stack-sm" style="font-variation-settings: 'FILL' 1;">location_on</span>
+<p class="font-bold">Main Campus</p>
+<p class="text-body-sm">Click to expand map</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer (Shared Component) -->
+<footer class="w-full py-stack-lg px-margin-desktop grid grid-cols-1 md:grid-cols-3 gap-gutter bg-primary border-t border-white/10">
+<div class="flex flex-col gap-stack-md">
+<div class="font-display-lg text-headline-md text-white">BFHS</div>
+<p class="text-surface-variant/80 font-body-sm">Excellence in education, shaping the global citizens of tomorrow through innovation and character development.</p>
+</div>
+<div class="flex flex-col gap-stack-md">
+<h4 class="text-white font-bold">Quick Links</h4>
+<div class="grid grid-cols-2 gap-stack-sm">
+<a class="text-surface-variant/80 hover:text-white font-body-sm transition-opacity" href="#">Privacy Policy</a>
+<a class="text-surface-variant/80 hover:text-white font-body-sm transition-opacity" href="#">Terms of Service</a>
+<a class="text-surface-variant/80 hover:text-white font-body-sm transition-opacity" href="#">Accessibility</a>
+<a class="text-surface-variant/80 hover:text-white font-body-sm transition-opacity" href="#">Contact Us</a>
+</div>
+</div>
+<div class="flex flex-col gap-stack-md md:items-end">
+<h4 class="text-white font-bold">Follow Us</h4>
+<div class="flex gap-stack-md">
+<span class="material-symbols-outlined text-white cursor-pointer hover:text-secondary-container transition-colors">face_nod</span>
+<span class="material-symbols-outlined text-white cursor-pointer hover:text-secondary-container transition-colors">share</span>
+<span class="material-symbols-outlined text-white cursor-pointer hover:text-secondary-container transition-colors">public</span>
+</div>
+<div class="text-surface-variant/80 font-body-sm mt-stack-md">© 2024 Bright Future High School. Excellence in Education.</div>
+</div>
+</footer>
+<script>
+        // Simple Micro-interactions for Hero Parallax
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const heroImage = document.querySelector('section img');
+            if(heroImage) {
+                heroImage.style.transform = `translateY(${scrolled * 0.4}px)`;
+            }
+        });
+
+        // Navbar interaction on scroll
+        const header = document.querySelector('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('py-2', 'shadow-md');
+                header.classList.remove('py-4', 'shadow-sm');
+            } else {
+                header.classList.add('py-4', 'shadow-sm');
+                header.classList.remove('py-2', 'shadow-md');
+            }
+        });
+    </script>
+</body></html>
