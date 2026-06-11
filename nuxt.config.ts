@@ -133,6 +133,13 @@ const globalStyle = `
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
+  runtimeConfig: {
+    public: {
+      // Spring Boot backend base URL (see back_api_java_spring_boot.readme.md).
+      // Override at runtime with NUXT_PUBLIC_API_BASE.
+      apiBase: process.env.NUXT_PUBLIC_API_BASE || 'http://localhost:8080/api/v1',
+    },
+  },
   app: {
     head: {
       title: 'Bright Future High School',

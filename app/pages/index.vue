@@ -23,6 +23,7 @@ const { t } = useI18n({
     contactSub: 'Have questions about admissions or our programs? Our team is here to help you navigate your journey.',
     address: '123 Academic Way, Education City, ED 56789',
     fullName: 'Full Name', email: 'Email Address', message: 'Message', send: 'Send Message',
+    sending: 'Sending…', sent: 'Thanks! We will be in touch shortly.', sendError: 'Something went wrong. Please try again.',
     mainCampus: 'Main Campus', expandMap: 'Click to expand map',
   },
   km: {
@@ -46,16 +47,21 @@ const { t } = useI18n({
     contactSub: 'មានសំណួរអំពីការចូលរៀន ឬកម្មវិធីរបស់យើងមែនទេ? ក្រុមការងាររបស់យើងនៅទីនេះដើម្បីជួយអ្នក។',
     address: '១២៣ ផ្លូវ Academic, ទីក្រុងអប់រំ, ED 56789',
     fullName: 'ឈ្មោះពេញ', email: 'អាសយដ្ឋានអ៊ីមែល', message: 'សារ', send: 'ផ្ញើសារ',
+    sending: 'កំពុងផ្ញើ…', sent: 'អរគុណ! យើងនឹងទាក់ទងអ្នកក្នុងពេលឆាប់ៗ។', sendError: 'មានបញ្ហាបានកើតឡើង។ សូមព្យាយាមម្ដងទៀត។',
     mainCampus: 'សាខាមេ', expandMap: 'ចុចដើម្បីពង្រីកផែនទី',
   },
 })
 
-const stats = computed(() => [
+interface Stat { key?: string; icon: string; value: string; label: string }
+const staticStats = computed<Stat[]>(() => [
   { icon: 'groups', value: '2,500+', label: t('students') },
   { icon: 'school', value: '150+', label: t('teachers') },
   { icon: 'meeting_room', value: '50+', label: t('classrooms') },
   { icon: 'verified', value: '98%', label: t('gradRate') },
 ])
+// Live from GET /home/stats when the backend is up; bundled content otherwise.
+const { data: apiStats } = useContent<Stat[] | null>('home-stats', '/home/stats', null)
+const stats = computed<Stat[]>(() => (apiStats.value?.length ? apiStats.value : staticStats.value))
 
 const programs = computed(() => [
   {
@@ -77,6 +83,22 @@ const events = computed(() => [
   { month: 'Oct', day: '22', title: t('event2'), detail: t('event2d'), accent: false },
   { month: 'Nov', day: '05', title: t('event3'), detail: t('event3d'), accent: true },
 ])
+
+// Contact form → POST /contact
+const api = useApi()
+const contact = reactive({ fullName: '', email: '', message: '' })
+const contactState = ref<'idle' | 'sending' | 'sent' | 'error'>('idle')
+
+async function submitContact() {
+  contactState.value = 'sending'
+  try {
+    await api('/contact', { method: 'POST', body: { ...contact } })
+    contactState.value = 'sent'
+    contact.fullName = contact.email = contact.message = ''
+  } catch {
+    contactState.value = 'error'
+  }
+}
 
 const heroImg = ref<HTMLImageElement | null>(null)
 function onScroll() {
@@ -241,11 +263,13 @@ onBeforeUnmount(() => window.removeEventListener('scroll', onScroll))
               <span class="text-body-md">admissions@bfhs.edu</span>
             </div>
           </div>
-          <form class="space-y-stack-sm max-w-md" @submit.prevent>
-            <input class="w-full bg-white/10 border-0 rounded-xl px-4 py-3 placeholder:text-white/50 focus:ring-2 focus:ring-secondary-container transition-all" :placeholder="t('fullName')" type="text" />
-            <input class="w-full bg-white/10 border-0 rounded-xl px-4 py-3 placeholder:text-white/50 focus:ring-2 focus:ring-secondary-container transition-all" :placeholder="t('email')" type="email" />
-            <textarea class="w-full bg-white/10 border-0 rounded-xl px-4 py-3 placeholder:text-white/50 focus:ring-2 focus:ring-secondary-container transition-all" :placeholder="t('message')" rows="3"></textarea>
-            <button class="w-full bg-secondary-container text-primary font-bold py-3 rounded-xl hover:opacity-90 transition-opacity" type="submit">{{ t('send') }}</button>
+          <form class="space-y-stack-sm max-w-md" @submit.prevent="submitContact">
+            <input v-model="contact.fullName" required class="w-full bg-white/10 border-0 rounded-xl px-4 py-3 placeholder:text-white/50 focus:ring-2 focus:ring-secondary-container transition-all" :placeholder="t('fullName')" type="text" />
+            <input v-model="contact.email" required class="w-full bg-white/10 border-0 rounded-xl px-4 py-3 placeholder:text-white/50 focus:ring-2 focus:ring-secondary-container transition-all" :placeholder="t('email')" type="email" />
+            <textarea v-model="contact.message" required class="w-full bg-white/10 border-0 rounded-xl px-4 py-3 placeholder:text-white/50 focus:ring-2 focus:ring-secondary-container transition-all" :placeholder="t('message')" rows="3"></textarea>
+            <p v-if="contactState === 'sent'" class="text-secondary-container text-body-sm font-semibold">{{ t('sent') }}</p>
+            <p v-else-if="contactState === 'error'" class="text-error-container text-body-sm font-semibold">{{ t('sendError') }}</p>
+            <button :disabled="contactState === 'sending'" class="w-full bg-secondary-container text-primary font-bold py-3 rounded-xl hover:opacity-90 disabled:opacity-60 transition-opacity" type="submit">{{ contactState === 'sending' ? t('sending') : t('send') }}</button>
           </form>
         </div>
         <div class="h-[400px] lg:h-full rounded-[2rem] overflow-hidden shadow-2xl relative">

@@ -1,19 +1,30 @@
 <script setup lang="ts">
 const { theme, toggle: toggleTheme } = useThemeControls()
 const { locale, toggle: toggleLocale } = useLocaleControls()
+const { isAuthenticated, user, logout } = useAuth()
 
 const { t } = useI18n({
   en: {
     home: 'Home', about: 'About', academics: 'Academics', studentLife: 'Student Life',
     admissions: 'Admissions', news: 'News', portalLogin: 'Portal Login',
+    dashboard: 'Dashboard', logout: 'Log out',
     school: 'Bright Future High School',
   },
   km: {
     home: 'ទំព័រដើម', about: 'អំពីយើង', academics: 'ការសិក្សា', studentLife: 'ជីវិតសិស្ស',
     admissions: 'ការចូលរៀន', news: 'ព័ត៌មាន', portalLogin: 'ចូលគណនី',
+    dashboard: 'ផ្ទាំងគ្រប់គ្រង', logout: 'ចាកចេញ',
     school: 'វិទ្យាល័យអនាគតភ្លឺស្វាង',
   },
 })
+
+const myDashboard = computed(() => (user.value ? dashboardFor(user.value.role) : '/portal/login'))
+
+async function onLogout() {
+  mobileOpen.value = false
+  await logout()
+  navigateTo('/')
+}
 
 const links = computed(() => [
   { label: t('home'), to: '/' },
@@ -72,8 +83,24 @@ onBeforeUnmount(() => window.removeEventListener('scroll', onScroll))
         >
           <span class="material-symbols-outlined text-[20px]">{{ theme === 'dark' ? 'light_mode' : 'dark_mode' }}</span>
         </button>
+        <template v-if="isAuthenticated">
+          <NuxtLink
+            :to="myDashboard"
+            class="hidden sm:inline-flex items-center gap-1.5 bg-primary text-white px-5 py-2 rounded-lg font-label-md hover:opacity-90 transition-all"
+          >
+            <span class="material-symbols-outlined text-[18px]">dashboard</span>{{ t('dashboard') }}
+          </NuxtLink>
+          <button
+            class="hidden sm:inline-flex h-9 w-9 items-center justify-center rounded-lg border border-outline-variant/40 text-on-surface-variant hover:text-error hover:border-error transition-colors"
+            :aria-label="t('logout')"
+            @click="onLogout"
+          >
+            <span class="material-symbols-outlined text-[20px]">logout</span>
+          </button>
+        </template>
         <NuxtLink
-          to="/portal/student"
+          v-else
+          to="/portal/login"
           class="hidden sm:inline-block bg-primary text-white px-6 py-2 rounded-lg font-label-md hover:opacity-90 transition-all"
         >
           {{ t('portalLogin') }}
@@ -103,7 +130,23 @@ onBeforeUnmount(() => window.removeEventListener('scroll', onScroll))
         {{ link.label }}
       </NuxtLink>
       <NuxtLink
-        to="/portal/student"
+        v-if="isAuthenticated"
+        :to="myDashboard"
+        class="mt-stack-sm bg-primary text-white px-6 py-2 rounded-lg font-label-md text-center"
+        @click="mobileOpen = false"
+      >
+        {{ t('dashboard') }}
+      </NuxtLink>
+      <button
+        v-if="isAuthenticated"
+        class="bg-surface-container text-error px-6 py-2 rounded-lg font-label-md text-center"
+        @click="onLogout"
+      >
+        {{ t('logout') }}
+      </button>
+      <NuxtLink
+        v-else
+        to="/portal/login"
         class="mt-stack-sm bg-primary text-white px-6 py-2 rounded-lg font-label-md text-center"
         @click="mobileOpen = false"
       >

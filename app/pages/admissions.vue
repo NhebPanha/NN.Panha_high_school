@@ -66,6 +66,9 @@ const { t } = useI18n({
     formPlaceholderComments: "Tell us anything else you'd like us to know...",
     formSubmitButton: 'Submit Application',
     alertSubmitSuccess: 'Application submitted successfully!',
+    formSubmitting: 'Submitting…',
+    formSubmitError: 'Submission failed. Please try again.',
+    referenceLabel: 'Your reference:',
 
     // CTA sidebar
     enrollmentOpenBadge: 'ENROLLMENT OPEN',
@@ -147,6 +150,9 @@ const { t } = useI18n({
     formPlaceholderComments: 'ប្រាប់យើងអំពីអ្វីផ្សេងទៀតដែលអ្នកចង់ឱ្យយើងដឹង...',
     formSubmitButton: 'ដាក់ពាក្យសុំ',
     alertSubmitSuccess: 'ពាក្យសុំត្រូវបានដាក់ជូនដោយជោគជ័យ!',
+    formSubmitting: 'កំពុងដាក់ស្នើ…',
+    formSubmitError: 'ការដាក់ស្នើបរាជ័យ។ សូមព្យាយាមម្ដងទៀត។',
+    referenceLabel: 'លេខយោងរបស់អ្នក៖',
 
     // CTA sidebar
     enrollmentOpenBadge: 'ការចុះឈ្មោះបើកហើយ',
@@ -173,9 +179,29 @@ function toggleFaq(index: number) {
   faqOpen.value = faqOpen.value === index ? null : index
 }
 
-// Application form submission
-function handleApplicationSubmit() {
-  alert(t('alertSubmitSuccess'))
+// Application form → POST /admissions/applications
+const api = useApi()
+const application = reactive({ firstName: '', lastName: '', email: '', grade: '9', message: '' })
+const applyState = ref<'idle' | 'sending' | 'sent' | 'error'>('idle')
+const applyReference = ref('')
+
+async function handleApplicationSubmit() {
+  applyState.value = 'sending'
+  try {
+    const res = await api<{ reference?: string }>('/admissions/applications', {
+      method: 'POST',
+      body: {
+        studentName: `${application.firstName} ${application.lastName}`.trim(),
+        gradeApplyingFor: Number(application.grade),
+        email: application.email,
+        message: application.message,
+      },
+    })
+    applyReference.value = res?.reference || ''
+    applyState.value = 'sent'
+  } catch {
+    applyState.value = 'error'
+  }
 }
 
 // Reactive computed data arrays
@@ -305,31 +331,38 @@ const faqs = computed(() => [
               <div class="grid grid-cols-1 md:grid-cols-2 gap-stack-md">
                 <div class="flex flex-col gap-unit">
                   <label class="text-label-md text-on-surface-variant ml-2">{{ t('formLabelFirstName') }}</label>
-                  <input class="bg-surface-container-low border-none rounded-xl p-4 focus:ring-2 focus:ring-secondary transition-all" :placeholder="t('formPlaceholderFirstName')" required type="text">
+                  <input v-model="application.firstName" class="bg-surface-container-low border-none rounded-xl p-4 focus:ring-2 focus:ring-secondary transition-all" :placeholder="t('formPlaceholderFirstName')" required type="text">
                 </div>
                 <div class="flex flex-col gap-unit">
                   <label class="text-label-md text-on-surface-variant ml-2">{{ t('formLabelLastName') }}</label>
-                  <input class="bg-surface-container-low border-none rounded-xl p-4 focus:ring-2 focus:ring-secondary transition-all" :placeholder="t('formPlaceholderLastName')" required type="text">
+                  <input v-model="application.lastName" class="bg-surface-container-low border-none rounded-xl p-4 focus:ring-2 focus:ring-secondary transition-all" :placeholder="t('formPlaceholderLastName')" required type="text">
                 </div>
               </div>
               <div class="flex flex-col gap-unit">
                 <label class="text-label-md text-on-surface-variant ml-2">{{ t('formLabelEmail') }}</label>
-                <input class="bg-surface-container-low border-none rounded-xl p-4 focus:ring-2 focus:ring-secondary transition-all" :placeholder="t('formPlaceholderEmail')" required type="email">
+                <input v-model="application.email" class="bg-surface-container-low border-none rounded-xl p-4 focus:ring-2 focus:ring-secondary transition-all" :placeholder="t('formPlaceholderEmail')" required type="email">
               </div>
               <div class="flex flex-col gap-unit">
                 <label class="text-label-md text-on-surface-variant ml-2">{{ t('formLabelGrade') }}</label>
-                <select class="bg-surface-container-low border-none rounded-xl p-4 focus:ring-2 focus:ring-secondary transition-all">
-                  <option>{{ t('gradeOption9') }}</option>
-                  <option>{{ t('gradeOption10') }}</option>
-                  <option>{{ t('gradeOption11') }}</option>
-                  <option>{{ t('gradeOption12') }}</option>
+                <select v-model="application.grade" class="bg-surface-container-low border-none rounded-xl p-4 focus:ring-2 focus:ring-secondary transition-all">
+                  <option value="9">{{ t('gradeOption9') }}</option>
+                  <option value="10">{{ t('gradeOption10') }}</option>
+                  <option value="11">{{ t('gradeOption11') }}</option>
+                  <option value="12">{{ t('gradeOption12') }}</option>
                 </select>
               </div>
               <div class="flex flex-col gap-unit">
                 <label class="text-label-md text-on-surface-variant ml-2">{{ t('formLabelComments') }}</label>
-                <textarea class="bg-surface-container-low border-none rounded-xl p-4 focus:ring-2 focus:ring-secondary transition-all" :placeholder="t('formPlaceholderComments')" rows="3"></textarea>
+                <textarea v-model="application.message" class="bg-surface-container-low border-none rounded-xl p-4 focus:ring-2 focus:ring-secondary transition-all" :placeholder="t('formPlaceholderComments')" rows="3"></textarea>
               </div>
-              <button class="w-full bg-primary text-on-primary py-4 rounded-xl font-bold text-body-lg hover:bg-secondary transition-colors shadow-md" type="submit">{{ t('formSubmitButton') }}</button>
+              <p v-if="applyState === 'sent'" class="bg-secondary/10 text-secondary rounded-xl p-4 text-body-md font-semibold">
+                {{ t('alertSubmitSuccess') }}
+                <span v-if="applyReference" class="block font-normal text-on-surface-variant mt-1">{{ t('referenceLabel') }} {{ applyReference }}</span>
+              </p>
+              <p v-else-if="applyState === 'error'" class="bg-error-container/40 text-error rounded-xl p-4 text-body-md font-semibold">{{ t('formSubmitError') }}</p>
+              <button :disabled="applyState === 'sending'" class="w-full bg-primary text-on-primary py-4 rounded-xl font-bold text-body-lg hover:bg-secondary disabled:opacity-60 transition-colors shadow-md" type="submit">
+                {{ applyState === 'sending' ? t('formSubmitting') : t('formSubmitButton') }}
+              </button>
             </form>
           </div>
         </div>

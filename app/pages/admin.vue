@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
 
-definePageMeta({ layout: 'portal' })
+definePageMeta({ layout: 'portal', middleware: 'auth' })
 useHead({ title: 'Admin Dashboard' })
 
 // Glass-panel hover lift state: keyed by index

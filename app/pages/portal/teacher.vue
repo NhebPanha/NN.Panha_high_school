@@ -1,5 +1,5 @@
 <script setup lang="ts">
-definePageMeta({ layout: 'portal' })
+definePageMeta({ layout: 'portal', middleware: 'auth' })
 useHead({ title: 'Teacher Portal' })
 
 import { ref, onMounted } from 'vue'
