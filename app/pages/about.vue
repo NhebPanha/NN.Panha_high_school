@@ -98,7 +98,7 @@ const { t } = useI18n({
 <template>
   <div>
     <!-- Hero Section: History & Mission -->
-    <section class="px-margin-desktop py-stack-lg max-w-container-max mx-auto grid grid-cols-1 lg:grid-cols-2 gap-gutter items-center">
+    <section class="px-margin-desktop pt-32 pb-24 max-w-container-max mx-auto grid grid-cols-1 lg:grid-cols-2 gap-gutter items-center">
       <div class="space-y-stack-md">
         <span class="font-label-md text-label-md text-secondary uppercase tracking-widest">{{ t('ourLegacy') }}</span>
         <h1 class="font-display-lg text-display-lg text-primary leading-tight">{{ t('heroHeading') }}</h1>
@@ -142,7 +142,7 @@ const { t } = useI18n({
       </div>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
         <!-- Excellence -->
-        <div class="glass-card p-8 rounded-3xl border border-outline-variant/30 flex flex-col items-start gap-4 hover:shadow-xl transition-shadow">
+        <div class="glass-card p-8 rounded-3xl border border-outline-variant/30 flex flex-col items-start gap-4 hover:shadow-xl hover:-translate-y-1">
           <div class="w-12 h-12 bg-primary-container rounded-xl flex items-center justify-center text-on-primary-container">
             <span class="material-symbols-outlined">auto_awesome</span>
           </div>
@@ -150,7 +150,7 @@ const { t } = useI18n({
           <p class="text-on-surface-variant">{{ t('excellenceBody') }}</p>
         </div>
         <!-- Integrity -->
-        <div class="glass-card p-8 rounded-3xl border border-outline-variant/30 flex flex-col items-start gap-4 hover:shadow-xl transition-shadow bg-surface-container-low">
+        <div class="glass-card p-8 rounded-3xl border border-outline-variant/30 flex flex-col items-start gap-4 hover:shadow-xl hover:-translate-y-1 bg-surface-container-low">
           <div class="w-12 h-12 bg-secondary-container rounded-xl flex items-center justify-center text-on-secondary-container">
             <span class="material-symbols-outlined">verified_user</span>
           </div>
@@ -158,7 +158,7 @@ const { t } = useI18n({
           <p class="text-on-surface-variant">{{ t('integrityBody') }}</p>
         </div>
         <!-- Innovation -->
-        <div class="glass-card p-8 rounded-3xl border border-outline-variant/30 flex flex-col items-start gap-4 hover:shadow-xl transition-shadow">
+        <div class="glass-card p-8 rounded-3xl border border-outline-variant/30 flex flex-col items-start gap-4 hover:shadow-xl hover:-translate-y-1">
           <div class="w-12 h-12 bg-tertiary-fixed rounded-xl flex items-center justify-center text-on-tertiary-fixed">
             <span class="material-symbols-outlined">lightbulb</span>
           </div>

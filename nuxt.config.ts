@@ -102,9 +102,19 @@ const globalStyle = `
 
   body { font-family: 'Inter', 'Noto Sans Khmer', sans-serif; }
 
+  html { scroll-behavior: smooth; }
+
   .glass-effect {
     backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
     background: rgba(255, 255, 255, 0.7); border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  /* Frosted card used across About / Student Life — smooth easing so hover never snaps. */
+  .glass-card {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 20px rgba(26, 54, 93, 0.05);
+    transition: transform .35s cubic-bezier(.4,0,.2,1), box-shadow .35s cubic-bezier(.4,0,.2,1), background-color .3s ease, color .3s ease;
   }
   .text-shadow-sm { text-shadow: 0 2px 4px rgba(0,0,0,0.1); }
   .hide-scrollbar::-webkit-scrollbar { display: none; }
@@ -120,23 +130,11 @@ const globalStyle = `
   html.dark { color-scheme: dark; }
 `
 
-// Set theme/lang before first paint to avoid a flash of the wrong theme.
-const noFlash = `
-  (function(){try{
-    var t = localStorage.getItem('bfhs-theme');
-    var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-    if (t === 'dark' || (!t && prefersDark)) document.documentElement.classList.add('dark');
-    var l = localStorage.getItem('bfhs-locale');
-    if (l === 'km' || l === 'en') document.documentElement.setAttribute('lang', l);
-  }catch(e){}})();
-`
-
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
   app: {
     head: {
-      htmlAttrs: { lang: 'en' },
       title: 'Bright Future High School',
       titleTemplate: (title?: string) =>
         title && title !== 'Bright Future High School'
@@ -157,7 +155,6 @@ export default defineNuxtConfig({
         },
       ],
       script: [
-        { innerHTML: noFlash, tagPosition: 'head' },
         { src: 'https://cdn.tailwindcss.com?plugins=forms,container-queries' },
         { innerHTML: tailwindConfig, type: 'text/javascript' },
       ],
