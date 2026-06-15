@@ -1,4 +1,5 @@
-export type Theme = 'light' | 'dark'
+import type { Theme } from '~/core/domain/shared/theme'
+export type { Theme }
 
 // Persisted in a cookie so the server can render the correct theme on first paint
 // (no flash, no hydration mismatch). Mutating the ref updates the cookie automatically.

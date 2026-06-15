@@ -1,29 +1,33 @@
 import type { $Fetch } from 'ofetch'
+import type { AuthRepository } from '~/core/domain/auth/auth.repository'
+import type { ContentRepository } from '~/core/domain/content/content.repository'
+import { createHttpClient } from '~/infrastructure/http/httpClient'
+import { HttpAuthRepository } from '~/infrastructure/repositories/HttpAuthRepository'
+import { HttpContentRepository } from '~/infrastructure/repositories/HttpContentRepository'
 
-// Single configured $fetch instance shared across the app. Injects the API base
-// URL, the bearer token, and the active language; normalises errors. Available as
-// `useApi()` or `useNuxtApp().$api`.
+// Composition root: the one place where infrastructure is wired to the rest of
+// the app. Builds the HTTP client and the concrete repositories, then provides
+// them for injection. Presentation composables resolve the ports from here,
+// never the implementations directly.
 export default defineNuxtPlugin(() => {
   const config = useRuntimeConfig()
   const locale = useLocale() // cookie-backed ref (en | km)
   const access = useCookie<string | null>('bfhs_access')
 
-  const api = $fetch.create({
+  const api = createHttpClient({
     baseURL: config.public.apiBase,
-    retry: 0,
-    onRequest({ options }) {
-      const headers = new Headers(options.headers as HeadersInit)
-      headers.set('Accept-Language', locale.value || 'en')
-      if (access.value) headers.set('Authorization', `Bearer ${access.value}`)
-      options.headers = headers
-    },
-    onResponseError({ response }) {
-      // 401 handling (token expiry) is performed by useAuth on the client.
-      if (import.meta.dev && response?.status) {
-        console.debug(`[api] ${response.status} ${response.url}`)
-      }
-    },
+    getToken: () => access.value ?? null,
+    getLocale: () => locale.value || 'en',
   })
 
-  return { provide: { api: api as $Fetch } }
+  const authRepository = new HttpAuthRepository(api)
+  const contentRepository = new HttpContentRepository(api)
+
+  return {
+    provide: {
+      api: api as $Fetch,
+      authRepository: authRepository as AuthRepository,
+      contentRepository: contentRepository as ContentRepository,
+    },
+  }
 })
