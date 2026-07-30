@@ -59,6 +59,27 @@ cases, and resolve repository ports from the composition root via injection.
 - To swap the backend (REST → GraphQL, or a mock for tests), implement
   `AuthRepository`/`ContentRepository` and change only the composition root.
 
+## Design system (presentation layer)
+
+The UI is driven by one semantic token set defined in `nuxt.config.ts` as CSS
+variables (RGB triplets) and exposed to Tailwind as colour names. The whole
+palette flips under `.dark` — there are **no** per-page dark-mode overrides.
+
+- `fg` / `fg-muted` / `fg-subtle` — text on ordinary page surfaces.
+- `bg` / `surface` / `surface-2` / `surface-3` — background elevation ramp.
+- `brand` / `accent` — filled surfaces; only their `on-*` partners are legal on top.
+- `on-dark` / `on-dark-muted` — text over photography or brand fills (constant in both themes).
+- Never colour a heading with `brand`; that is what broke dark mode previously.
+
+Primitives live in `components/ui/` and auto-import with a `Ui` prefix:
+`UiButton`, `UiCard`, `UiBadge`, `UiField`, `UiIcon`, `UiAvatar`, `UiStat`,
+`UiSection`, `UiSectionHead`, `UiContainer`, `UiThemeToggle`, `UiLocaleToggle`.
+
+Page chrome: `SiteHeader` + `SiteFooter` (via `layouts/default.vue`) for the
+public site, `PageHeader` for interior mastheads, and `PortalShell`
+(`components/portal/Shell.vue`) for every dashboard — rail, top bar, account
+menu and footer in one place, parameterised by `audience`, `nav` and `title`.
+
 ## Adding a feature
 
 1. Model it in `core/domain/<feature>/` — entity types + a repository port.

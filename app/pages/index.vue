@@ -3,52 +3,60 @@ useHead({ title: 'Home' })
 
 const { t } = useI18n({
   en: {
-    heroTitle1: 'Empowering Minds,', heroTitle2: 'Shaping Futures',
+    eyebrow: 'Established 1992 · Grades 9–12',
+    heroTitle1: 'Empowering minds,', heroTitle2: 'shaping futures.',
     heroSub: 'Discover a community where innovation meets tradition, and every student is equipped with the tools to lead in a changing world.',
-    enroll: 'Enroll Now', explore: 'Explore Programs',
+    enroll: 'Begin your application', explore: 'Explore programs',
     students: 'Students', teachers: 'Teachers', classrooms: 'Classrooms', gradRate: 'Graduation Rate',
-    excellenceTitle: 'Academic Excellence', excellenceSub: "Programs tailored for tomorrow's leaders.",
+    creed: 'Our promise',
+    creedBody: 'We teach students to think rigorously, act with integrity, and carry both into the world. Small classes, expert faculty, and a curriculum that refuses to choose between depth and breadth.',
+    excellenceTitle: 'Academic excellence', excellenceSub: "Programs tailored for tomorrow's leaders.",
     science: 'Science & STEM', arts: 'Creative Arts', humanities: 'Humanities',
     scienceBody: 'Cutting-edge laboratories and robotics programs preparing students for the technological frontier.',
     artsBody: 'From classical painting to digital media, nurture your creative voice in our state-of-the-art studios.',
     humanitiesBody: 'Exploring literature, history, and social sciences to develop critical thinking and global awareness.',
-    exploreCurriculum: 'Explore Curriculum',
-    upcomingEvents: 'Upcoming Events', voices: 'Voices of BFHS',
-    event1: 'Annual Science Fair', event1d: 'Main Campus Hall • 09:00 AM',
-    event2: 'Parent-Teacher Conference', event2d: 'Online / Zoom • 04:00 PM',
-    event3: 'Winter Sports Gala', event3d: 'Athletic Complex • 02:00 PM',
-    quote: '"The interdisciplinary approach at Bright Future allowed me to merge my passion for environmental science with community leadership. I feel truly prepared for university."',
+    exploreCurriculum: 'Explore curriculum',
+    upcomingEvents: 'Upcoming events', allEvents: 'View the full calendar',
+    voices: 'Voices of BFHS',
+    event1: 'Annual Science Fair', event1d: 'Main Campus Hall · 09:00 AM',
+    event2: 'Parent-Teacher Conference', event2d: 'Online / Zoom · 04:00 PM',
+    event3: 'Winter Sports Gala', event3d: 'Athletic Complex · 02:00 PM',
+    quote: 'The interdisciplinary approach at Bright Future allowed me to merge my passion for environmental science with community leadership. I feel truly prepared for university.',
     quoteName: 'Sarah Jenkins', quoteClass: 'Class of 2024',
-    getInTouch: 'Get in Touch',
+    getInTouch: 'Get in touch',
     contactSub: 'Have questions about admissions or our programs? Our team is here to help you navigate your journey.',
     address: '123 Academic Way, Education City, ED 56789',
-    fullName: 'Full Name', email: 'Email Address', message: 'Message', send: 'Send Message',
+    fullName: 'Full name', email: 'Email address', message: 'Message', send: 'Send message',
     sending: 'Sending…', sent: 'Thanks! We will be in touch shortly.', sendError: 'Something went wrong. Please try again.',
-    mainCampus: 'Main Campus', expandMap: 'Click to expand map',
+    visit: 'Visit campus', visitSub: 'Tours run every Tuesday and Thursday at 10:00.',
   },
   km: {
-    heroTitle1: 'ជំរុញគំនិត,', heroTitle2: 'កសាងអនាគត',
+    eyebrow: 'បង្កើតឆ្នាំ ១៩៩២ · ថ្នាក់ទី ៩–១២',
+    heroTitle1: 'ជំរុញគំនិត,', heroTitle2: 'កសាងអនាគត។',
     heroSub: 'ស្វែងរកសហគមន៍ដែលនវានុវត្តន៍ជួបនឹងប្រពៃណី ហើយសិស្សគ្រប់រូបត្រូវបានបំពាក់នូវឧបករណ៍ដើម្បីដឹកនាំក្នុងពិភពលោកដែលកំពុងផ្លាស់ប្តូរ។',
-    enroll: 'ចុះឈ្មោះឥឡូវនេះ', explore: 'ស្វែងយល់កម្មវិធី',
+    enroll: 'ចាប់ផ្ដើមដាក់ពាក្យ', explore: 'ស្វែងយល់កម្មវិធី',
     students: 'សិស្ស', teachers: 'គ្រូបង្រៀន', classrooms: 'បន្ទប់រៀន', gradRate: 'អត្រាបញ្ចប់ការសិក្សា',
+    creed: 'ការសន្យារបស់យើង',
+    creedBody: 'យើងបង្រៀនសិស្សឱ្យគិតយ៉ាងម៉ត់ចត់ ប្រព្រឹត្តដោយសុចរិតភាព និងនាំយកទាំងពីរនេះទៅកាន់ពិភពលោក។ ថ្នាក់តូច គ្រូជំនាញ និងកម្មវិធីសិក្សាដែលមិនសម្រុះសម្រួលរវាងជម្រៅ និងទំហំ។',
     excellenceTitle: 'ឧត្តមភាពសិក្សា', excellenceSub: 'កម្មវិធីរៀបចំសម្រាប់អ្នកដឹកនាំនាថ្ងៃអនាគត។',
     science: 'វិទ្យាសាស្ត្រ និង STEM', arts: 'សិល្បៈច្នៃប្រឌិត', humanities: 'មនុស្សសាស្ត្រ',
     scienceBody: 'មន្ទីរពិសោធន៍ទំនើប និងកម្មវិធីមនុស្សយន្ត រៀបចំសិស្សសម្រាប់ព្រំដែនបច្ចេកវិទ្យា។',
     artsBody: 'ចាប់ពីការគូរបុរាណរហូតដល់មេឌៀឌីជីថល បណ្តុះសំឡេងច្នៃប្រឌិតរបស់អ្នកនៅក្នុងស្ទូឌីយោទំនើប។',
     humanitiesBody: 'ស្វែងយល់អក្សរសាស្ត្រ ប្រវត្តិសាស្ត្រ និងសង្គមសាស្ត្រ ដើម្បីអភិវឌ្ឍការគិតបែបវិចារណញាណ និងការយល់ដឹងសកល។',
     exploreCurriculum: 'ស្វែងយល់កម្មវិធីសិក្សា',
-    upcomingEvents: 'ព្រឹត្តិការណ៍ខាងមុខ', voices: 'សំឡេងនៃ BFHS',
-    event1: 'ពិព័រណ៍វិទ្យាសាស្ត្រប្រចាំឆ្នាំ', event1d: 'សាលធំ • ៩:០០ ព្រឹក',
-    event2: 'ការប្រជុំមាតាបិតា-គ្រូបង្រៀន', event2d: 'អនឡាញ / Zoom • ៤:០០ ល្ងាច',
-    event3: 'ពិធីបុណ្យកីឡារដូវរងា', event3d: 'សង្កែកីឡា • ២:០០ រសៀល',
-    quote: '"វិធីសាស្ត្រអន្តរវិញ្ញាសានៅ Bright Future បានអនុញ្ញាតឱ្យខ្ញុំបញ្ចូលចំណង់ចំណូលចិត្តផ្នែកវិទ្យាសាស្ត្របរិស្ថានជាមួយភាពជាអ្នកដឹកនាំសហគមន៍។ ខ្ញុំមានអារម្មណ៍ត្រៀមខ្លួនយ៉ាងពិតប្រាកដសម្រាប់សកលវិទ្យាល័យ។"',
+    upcomingEvents: 'ព្រឹត្តិការណ៍ខាងមុខ', allEvents: 'មើលប្រតិទិនពេញ',
+    voices: 'សំឡេងនៃ BFHS',
+    event1: 'ពិព័រណ៍វិទ្យាសាស្ត្រប្រចាំឆ្នាំ', event1d: 'សាលធំ · ៩:០០ ព្រឹក',
+    event2: 'ការប្រជុំមាតាបិតា-គ្រូបង្រៀន', event2d: 'អនឡាញ / Zoom · ៤:០០ ល្ងាច',
+    event3: 'ពិធីបុណ្យកីឡារដូវរងា', event3d: 'សង្កែកីឡា · ២:០០ រសៀល',
+    quote: 'វិធីសាស្ត្រអន្តរវិញ្ញាសានៅ Bright Future បានអនុញ្ញាតឱ្យខ្ញុំបញ្ចូលចំណង់ចំណូលចិត្តផ្នែកវិទ្យាសាស្ត្របរិស្ថានជាមួយភាពជាអ្នកដឹកនាំសហគមន៍។ ខ្ញុំមានអារម្មណ៍ត្រៀមខ្លួនយ៉ាងពិតប្រាកដសម្រាប់សកលវិទ្យាល័យ។',
     quoteName: 'សារ៉ា ជេនគីន', quoteClass: 'ជំនាន់ឆ្នាំ២០២៤',
     getInTouch: 'ទាក់ទងមកយើង',
     contactSub: 'មានសំណួរអំពីការចូលរៀន ឬកម្មវិធីរបស់យើងមែនទេ? ក្រុមការងាររបស់យើងនៅទីនេះដើម្បីជួយអ្នក។',
     address: '១២៣ ផ្លូវ Academic, ទីក្រុងអប់រំ, ED 56789',
     fullName: 'ឈ្មោះពេញ', email: 'អាសយដ្ឋានអ៊ីមែល', message: 'សារ', send: 'ផ្ញើសារ',
     sending: 'កំពុងផ្ញើ…', sent: 'អរគុណ! យើងនឹងទាក់ទងអ្នកក្នុងពេលឆាប់ៗ។', sendError: 'មានបញ្ហាបានកើតឡើង។ សូមព្យាយាមម្ដងទៀត។',
-    mainCampus: 'សាខាមេ', expandMap: 'ចុចដើម្បីពង្រីកផែនទី',
+    visit: 'ទស្សនាបរិវេណសាលា', visitSub: 'ដំណើរទស្សនាមានរៀងរាល់ថ្ងៃអង្គារ និងព្រហស្បតិ៍ ម៉ោង ១០:០០។',
   },
 })
 
@@ -79,9 +87,9 @@ const programs = computed(() => [
 ])
 
 const events = computed(() => [
-  { month: 'Oct', day: '15', title: t('event1'), detail: t('event1d'), accent: true },
-  { month: 'Oct', day: '22', title: t('event2'), detail: t('event2d'), accent: false },
-  { month: 'Nov', day: '05', title: t('event3'), detail: t('event3d'), accent: true },
+  { month: 'Oct', day: '15', title: t('event1'), detail: t('event1d') },
+  { month: 'Oct', day: '22', title: t('event2'), detail: t('event2d') },
+  { month: 'Nov', day: '05', title: t('event3'), detail: t('event3d') },
 ])
 
 // Contact form → POST /contact
@@ -100,11 +108,16 @@ async function submitContact() {
   }
 }
 
+// Restrained parallax: the image is oversized so the transform never exposes an edge.
 const heroImg = ref<HTMLImageElement | null>(null)
+let ticking = false
 function onScroll() {
-  if (heroImg.value) {
-    heroImg.value.style.transform = `translateY(${window.pageYOffset * 0.4}px)`
-  }
+  if (ticking) return
+  ticking = true
+  requestAnimationFrame(() => {
+    if (heroImg.value) heroImg.value.style.transform = `translate3d(0, ${window.scrollY * 0.18}px, 0)`
+    ticking = false
+  })
 }
 onMounted(() => window.addEventListener('scroll', onScroll, { passive: true }))
 onBeforeUnmount(() => window.removeEventListener('scroll', onScroll))
@@ -112,181 +125,216 @@ onBeforeUnmount(() => window.removeEventListener('scroll', onScroll))
 
 <template>
   <div>
-    <!-- Hero Section -->
-    <section class="relative h-screen flex items-center justify-center overflow-hidden">
-      <div class="absolute inset-0">
+    <!-- ── Hero ─────────────────────────────────────────────────────────── -->
+    <section class="relative isolate overflow-hidden bg-brand">
+      <div class="absolute inset-0 -z-10">
         <img
           ref="heroImg"
-          alt="Campus"
-          class="w-full h-full object-cover"
+          alt=""
+          class="h-[115%] w-full object-cover will-change-transform"
           src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbDPLpM5ZeGtka9_3slegAbQlTxCL8JeGynaeM_L3v4_4CitTYwBI1j-zVD7plhiOiDLIs8u3u5pJCb2_AFM3Q-XDn8cVBJuZWedx8xIy6wLozcqZSQ6UYh6XMu-IdsLD3LaU6LetMXaNi-WuHoWiEJq26-iNzrOVsv-upMo2mL5LGDBOlAxE7k4XrKCu51MF1SJF4DSbYVVxep0ECw2opBbMa5V-Jfi0qUHxCeErqBGgk13cR7IJ_1sSpbQKuuwdcPX7zDmNVn2g"
-        />
-        <div class="absolute inset-0 bg-gradient-to-r from-primary/60 to-transparent"></div>
-      </div>
-      <div class="relative z-10 text-center px-margin-mobile md:px-0">
-        <h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-white mb-stack-md text-shadow-sm">
-          {{ t('heroTitle1') }} <br /><span class="text-secondary-container">{{ t('heroTitle2') }}</span>
-        </h1>
-        <p class="text-white/90 text-body-lg max-w-2xl mx-auto mb-stack-lg">{{ t('heroSub') }}</p>
-        <div class="flex flex-col md:flex-row gap-gutter justify-center">
-          <NuxtLink to="/admissions" class="bg-primary text-white px-8 py-4 rounded-xl font-headline-sm hover:translate-y-[-2px] transition-transform shadow-lg">{{ t('enroll') }}</NuxtLink>
-          <NuxtLink to="/academics" class="glass-effect text-primary-container px-8 py-4 rounded-xl font-headline-sm hover:bg-white/90 transition-all">{{ t('explore') }}</NuxtLink>
-        </div>
-      </div>
-      <div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
-        <span class="material-symbols-outlined text-white text-4xl">keyboard_double_arrow_down</span>
-      </div>
-    </section>
-
-    <!-- Statistics Section -->
-    <section class="py-24 px-margin-desktop max-w-container-max mx-auto">
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-gutter">
-        <div
-          v-for="stat in stats"
-          :key="stat.label"
-          class="bg-white p-8 rounded-[2rem] shadow-[0px_4px_20px_rgba(0,0,0,0.05)] border border-outline-variant/30 flex flex-col items-center text-center hover:translate-y-[-4px] transition-transform"
         >
-          <div class="w-16 h-16 bg-surface-container rounded-full flex items-center justify-center mb-stack-md">
-            <span class="material-symbols-outlined text-primary text-3xl">{{ stat.icon }}</span>
-          </div>
-          <h3 class="font-display-lg text-headline-md text-primary">{{ stat.value }}</h3>
-          <p class="text-on-surface-variant font-label-md">{{ stat.label }}</p>
-        </div>
+        <div class="scrim-l absolute inset-0" />
       </div>
+
+      <UiContainer>
+        <div class="flex min-h-[560px] max-w-2xl flex-col justify-center py-24 lg:min-h-[680px] lg:py-32">
+          <p class="animate-fade-up text-eyebrow uppercase text-on-dark/70">{{ t('eyebrow') }}</p>
+          <h1 class="mt-5 animate-fade-up font-display text-display-1 text-balance text-on-dark [animation-delay:60ms]">
+            {{ t('heroTitle1') }}<br>
+            <span class="text-accent">{{ t('heroTitle2') }}</span>
+          </h1>
+          <p class="mt-6 max-w-xl animate-fade-up text-lead text-pretty text-on-dark-muted [animation-delay:120ms]">
+            {{ t('heroSub') }}
+          </p>
+          <div class="mt-9 flex animate-fade-up flex-col gap-3 sm:flex-row [animation-delay:180ms]">
+            <UiButton to="/admissions" variant="inverse" size="lg" icon-trailing="arrow_forward">{{ t('enroll') }}</UiButton>
+            <UiButton
+              to="/academics" size="lg"
+              class="border border-on-dark/25 text-on-dark hover:bg-on-dark/10"
+              variant="ghost"
+            >{{ t('explore') }}</UiButton>
+          </div>
+        </div>
+      </UiContainer>
     </section>
 
-    <!-- Featured Programs -->
-    <section class="py-24 bg-surface-container-low">
-      <div class="px-margin-desktop max-w-container-max mx-auto">
-        <div class="mb-stack-lg">
-          <h2 class="font-display-lg text-headline-md md:text-display-lg text-primary mb-stack-sm">{{ t('excellenceTitle') }}</h2>
-          <p class="text-on-surface-variant text-body-lg">{{ t('excellenceSub') }}</p>
-        </div>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+    <!-- ── Stat band: hairline-divided, no boxes ────────────────────────── -->
+    <section class="border-b border-line bg-surface">
+      <UiContainer>
+        <dl class="grid grid-cols-2 divide-line lg:grid-cols-4 lg:divide-x">
           <div
-            v-for="program in programs"
-            :key="program.title"
-            class="group relative overflow-hidden rounded-[2rem] bg-white shadow-md border border-outline-variant/20"
+            v-for="(stat, i) in stats"
+            :key="stat.label"
+            class="flex flex-col gap-1 border-line px-2 py-8 lg:px-8"
+            :class="[i < 2 && 'border-b lg:border-b-0', i % 2 === 1 && 'border-l lg:border-l-0']"
           >
-            <div class="h-64 overflow-hidden">
-              <img :alt="program.title" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" :src="program.img" />
-            </div>
-            <div class="p-8">
-              <div class="flex justify-between items-start mb-stack-sm">
-                <h3 class="font-headline-md text-primary">{{ program.title }}</h3>
-                <span class="material-symbols-outlined text-secondary">{{ program.icon }}</span>
-              </div>
-              <p class="text-body-md text-on-surface-variant mb-stack-md">{{ program.body }}</p>
-              <NuxtLink to="/academics" class="text-secondary font-label-md flex items-center gap-2 group-hover:translate-x-1 transition-transform">
-                {{ t('exploreCurriculum') }} <span class="material-symbols-outlined">arrow_forward</span>
-              </NuxtLink>
-            </div>
+            <UiIcon :name="stat.icon" :size="20" class="mb-2 text-accent" />
+            <dt class="order-2 text-label text-fg-muted">{{ stat.label }}</dt>
+            <dd class="font-display text-metric tabular-nums text-fg">{{ stat.value }}</dd>
           </div>
-        </div>
-      </div>
+        </dl>
+      </UiContainer>
     </section>
 
-    <!-- Events and Testimonials -->
-    <section class="py-24 px-margin-desktop max-w-container-max mx-auto overflow-hidden">
-      <div class="flex flex-col lg:flex-row gap-gutter">
-        <div class="lg:w-1/2">
-          <h2 class="font-headline-md text-headline-md text-primary mb-stack-lg">{{ t('upcomingEvents') }}</h2>
-          <div class="space-y-stack-md">
-            <NuxtLink
-              v-for="event in events"
-              :key="event.title"
-              to="/news"
-              class="flex gap-stack-md p-stack-md rounded-2xl hover:bg-surface-container transition-colors cursor-pointer group"
+    <!-- ── Positioning statement ────────────────────────────────────────── -->
+    <UiSection compact>
+      <div class="grid gap-8 lg:grid-cols-12">
+        <p class="text-eyebrow uppercase text-accent lg:col-span-3">{{ t('creed') }}</p>
+        <p class="font-display text-title-1 text-balance text-fg lg:col-span-9">{{ t('creedBody') }}</p>
+      </div>
+    </UiSection>
+
+    <!-- ── Programs ─────────────────────────────────────────────────────── -->
+    <UiSection tone="muted">
+      <UiSectionHead
+        :eyebrow="t('excellenceTitle')"
+        :title="t('excellenceSub')"
+        size="display"
+      />
+
+      <div class="mt-12 grid gap-6 md:grid-cols-3">
+        <article
+          v-for="program in programs"
+          :key="program.title"
+          class="group flex flex-col overflow-hidden rounded-xl border border-line bg-surface shadow-card transition-[transform,box-shadow,border-color] duration-200 ease-out hover:-translate-y-1 hover:border-line-strong hover:shadow-lift"
+        >
+          <div class="aspect-[16/10] overflow-hidden bg-surface-3">
+            <img
+              :alt="program.title" :src="program.img" loading="lazy"
+              class="h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.04]"
             >
-              <div
-                class="w-16 h-16 rounded-xl flex flex-col items-center justify-center shrink-0"
-                :class="event.accent ? 'bg-primary-container text-white' : 'bg-secondary-container text-primary'"
-              >
-                <span class="text-label-sm uppercase opacity-80">{{ event.month }}</span>
-                <span class="font-bold text-headline-sm">{{ event.day }}</span>
-              </div>
-              <div>
-                <h4 class="font-headline-sm text-on-surface group-hover:text-primary transition-colors">{{ event.title }}</h4>
-                <p class="text-body-sm text-on-surface-variant">{{ event.detail }}</p>
-              </div>
+          </div>
+          <div class="flex flex-1 flex-col p-6">
+            <div class="mb-3 flex items-center gap-2.5">
+              <UiIcon :name="program.icon" :size="18" class="text-accent" />
+              <h3 class="font-display text-title-3 text-fg">{{ program.title }}</h3>
+            </div>
+            <p class="flex-1 text-copy-sm text-fg-muted">{{ program.body }}</p>
+            <NuxtLink
+              to="/academics"
+              class="mt-6 inline-flex items-center gap-1.5 text-label font-medium text-fg transition-colors group-hover:text-accent"
+            >
+              {{ t('exploreCurriculum') }}
+              <UiIcon name="arrow_forward" :size="16" class="transition-transform duration-200 group-hover:translate-x-0.5" />
             </NuxtLink>
           </div>
+        </article>
+      </div>
+    </UiSection>
+
+    <!-- ── Events + testimonial ─────────────────────────────────────────── -->
+    <UiSection>
+      <div class="grid gap-12 lg:grid-cols-12 lg:gap-16">
+        <div class="lg:col-span-6">
+          <div class="flex items-end justify-between gap-4">
+            <h2 class="font-display text-title-1 text-fg">{{ t('upcomingEvents') }}</h2>
+            <NuxtLink to="/news" class="shrink-0 text-label text-fg-muted underline-offset-4 transition-colors hover:text-accent hover:underline">
+              {{ t('allEvents') }}
+            </NuxtLink>
+          </div>
+
+          <ul class="mt-6 divide-y divide-line border-y border-line">
+            <li v-for="event in events" :key="event.title">
+              <NuxtLink to="/news" class="group flex items-center gap-5 py-5 transition-colors">
+                <time class="flex w-14 shrink-0 flex-col items-center rounded-md border border-line bg-surface py-2 leading-none">
+                  <span class="text-eyebrow uppercase text-accent">{{ event.month }}</span>
+                  <span class="mt-1 font-display text-title-3 tabular-nums text-fg">{{ event.day }}</span>
+                </time>
+                <div class="min-w-0 flex-1">
+                  <h3 class="text-copy font-medium text-fg transition-colors group-hover:text-accent">{{ event.title }}</h3>
+                  <p class="mt-0.5 text-copy-sm text-fg-muted">{{ event.detail }}</p>
+                </div>
+                <UiIcon
+                  name="arrow_outward" :size="18"
+                  class="text-fg-subtle transition-transform duration-200 group-hover:translate-x-0.5 group-hover:text-accent"
+                />
+              </NuxtLink>
+            </li>
+          </ul>
         </div>
 
-        <div class="lg:w-1/2">
-          <h2 class="font-headline-md text-headline-md text-primary mb-stack-lg">{{ t('voices') }}</h2>
-          <div class="glass-effect p-12 rounded-[2rem] relative">
-            <div class="transition-opacity duration-300">
-              <p class="text-body-lg text-primary italic mb-stack-lg">{{ t('quote') }}</p>
-              <div class="flex items-center gap-stack-md">
-                <img
-                  alt="Student"
-                  class="w-12 h-12 rounded-full border-2 border-primary"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNs_STsgMUjnalkzypBBilq9Aw9_Uue_FoUzRmaEfwIXldvJ0W4sAWnabSFQEA5-jL-xK7P_LwC74C1w8pshPCGHU46K9GhIdpCh7PCyaSQokQg1Jqlt6wuaj7HRydgGQ5oHrdj5MeR8W3u0O-3BqCf3Vu4reCb0ldfVXXjcomzTd4d9_kjFiLYznR5jq8yyhVOPWGRHSaoyCJwZMefHbC_LemWO5vuNk-k7Sq1cokU3AuMHeKDpRdTa34ZoA-x74-1AgXUuguD40"
-                />
-                <div>
-                  <h5 class="font-headline-sm text-primary">{{ t('quoteName') }}</h5>
-                  <p class="text-label-sm text-on-surface-variant">{{ t('quoteClass') }}</p>
-                </div>
+        <div class="lg:col-span-6">
+          <h2 class="font-display text-title-1 text-fg">{{ t('voices') }}</h2>
+          <figure class="mt-6 rounded-xl border border-line bg-surface-2 p-8 sm:p-10">
+            <UiIcon name="format_quote" :size="32" class="text-accent" :filled="true" />
+            <blockquote class="mt-4 font-display text-title-3 leading-relaxed text-pretty text-fg">
+              {{ t('quote') }}
+            </blockquote>
+            <figcaption class="mt-8 flex items-center gap-3 border-t border-line pt-6">
+              <UiAvatar
+                :name="t('quoteName')"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNs_STsgMUjnalkzypBBilq9Aw9_Uue_FoUzRmaEfwIXldvJ0W4sAWnabSFQEA5-jL-xK7P_LwC74C1w8pshPCGHU46K9GhIdpCh7PCyaSQokQg1Jqlt6wuaj7HRydgGQ5oHrdj5MeR8W3u0O-3BqCf3Vu4reCb0ldfVXXjcomzTd4d9_kjFiLYznR5jq8yyhVOPWGRHSaoyCJwZMefHbC_LemWO5vuNk-k7Sq1cokU3AuMHeKDpRdTa34ZoA-x74-1AgXUuguD40"
+                :size="44"
+              />
+              <div>
+                <p class="text-label font-medium text-fg">{{ t('quoteName') }}</p>
+                <p class="text-label-sm text-fg-muted">{{ t('quoteClass') }}</p>
               </div>
-            </div>
-            <div class="mt-stack-lg flex gap-stack-sm">
-              <button class="w-10 h-10 rounded-full border border-primary flex items-center justify-center hover:bg-primary hover:text-white transition-colors">
-                <span class="material-symbols-outlined">chevron_left</span>
-              </button>
-              <button class="w-10 h-10 rounded-full border border-primary flex items-center justify-center hover:bg-primary hover:text-white transition-colors">
-                <span class="material-symbols-outlined">chevron_right</span>
-              </button>
-            </div>
-          </div>
+            </figcaption>
+          </figure>
         </div>
       </div>
-    </section>
+    </UiSection>
 
-    <!-- Contact Section -->
-    <section class="py-24 bg-primary text-white">
-      <div class="px-margin-desktop max-w-container-max mx-auto grid grid-cols-1 lg:grid-cols-2 gap-gutter items-center">
-        <div>
-          <h2 class="font-display-lg text-headline-md md:text-display-lg mb-stack-md">{{ t('getInTouch') }}</h2>
-          <p class="text-white/80 text-body-lg mb-stack-lg">{{ t('contactSub') }}</p>
-          <div class="space-y-stack-md mb-stack-lg">
-            <div class="flex items-center gap-stack-md">
-              <span class="material-symbols-outlined text-secondary-container">location_on</span>
-              <span class="text-body-md">{{ t('address') }}</span>
+    <!-- ── Contact ──────────────────────────────────────────────────────── -->
+    <UiSection tone="brand" id="contact">
+      <div class="grid gap-12 lg:grid-cols-12 lg:gap-16">
+        <div class="lg:col-span-5">
+          <UiSectionHead
+            :eyebrow="t('visit')"
+            :title="t('getInTouch')"
+            :lede="t('contactSub')"
+            tone="inverse"
+            size="display"
+          />
+
+          <dl class="mt-10 flex flex-col gap-4 border-t border-on-dark/15 pt-8">
+            <div class="flex items-start gap-3">
+              <UiIcon name="location_on" :size="18" class="mt-0.5 text-accent" />
+              <dd class="text-copy-sm text-on-dark-muted">{{ t('address') }}</dd>
             </div>
-            <div class="flex items-center gap-stack-md">
-              <span class="material-symbols-outlined text-secondary-container">call</span>
-              <span class="text-body-md">+1 (555) 000-1234</span>
+            <div class="flex items-start gap-3">
+              <UiIcon name="call" :size="18" class="mt-0.5 text-accent" />
+              <dd class="text-copy-sm text-on-dark-muted">+1 (555) 000-1234</dd>
             </div>
-            <div class="flex items-center gap-stack-md">
-              <span class="material-symbols-outlined text-secondary-container">mail</span>
-              <span class="text-body-md">admissions@bfhs.edu</span>
+            <div class="flex items-start gap-3">
+              <UiIcon name="mail" :size="18" class="mt-0.5 text-accent" />
+              <dd class="text-copy-sm text-on-dark-muted">admissions@bfhs.edu</dd>
             </div>
-          </div>
-          <form class="space-y-stack-sm max-w-md" @submit.prevent="submitContact">
-            <input v-model="contact.fullName" required class="w-full bg-white/10 border-0 rounded-xl px-4 py-3 placeholder:text-white/50 focus:ring-2 focus:ring-secondary-container transition-all" :placeholder="t('fullName')" type="text" />
-            <input v-model="contact.email" required class="w-full bg-white/10 border-0 rounded-xl px-4 py-3 placeholder:text-white/50 focus:ring-2 focus:ring-secondary-container transition-all" :placeholder="t('email')" type="email" />
-            <textarea v-model="contact.message" required class="w-full bg-white/10 border-0 rounded-xl px-4 py-3 placeholder:text-white/50 focus:ring-2 focus:ring-secondary-container transition-all" :placeholder="t('message')" rows="3"></textarea>
-            <p v-if="contactState === 'sent'" class="text-secondary-container text-body-sm font-semibold">{{ t('sent') }}</p>
-            <p v-else-if="contactState === 'error'" class="text-error-container text-body-sm font-semibold">{{ t('sendError') }}</p>
-            <button :disabled="contactState === 'sending'" class="w-full bg-secondary-container text-primary font-bold py-3 rounded-xl hover:opacity-90 disabled:opacity-60 transition-opacity" type="submit">{{ contactState === 'sending' ? t('sending') : t('send') }}</button>
+            <div class="flex items-start gap-3">
+              <UiIcon name="tour" :size="18" class="mt-0.5 text-accent" />
+              <dd class="text-copy-sm text-on-dark-muted">{{ t('visitSub') }}</dd>
+            </div>
+          </dl>
+        </div>
+
+        <div class="lg:col-span-7">
+          <form class="rounded-xl border border-on-dark/15 bg-on-dark/[0.04] p-6 sm:p-8" @submit.prevent="submitContact">
+            <div class="grid gap-5 sm:grid-cols-2">
+              <UiField v-model="contact.fullName" :label="t('fullName')" tone="inverse" required autocomplete="name" />
+              <UiField v-model="contact.email" :label="t('email')" type="email" tone="inverse" required autocomplete="email" />
+            </div>
+            <div class="mt-5">
+              <UiField v-model="contact.message" :label="t('message')" as="textarea" :rows="5" tone="inverse" required />
+            </div>
+
+            <p v-if="contactState === 'sent'" class="mt-5 flex items-center gap-2 rounded-md bg-success/15 px-3 py-2.5 text-copy-sm text-on-dark">
+              <UiIcon name="check_circle" :size="18" />{{ t('sent') }}
+            </p>
+            <p v-else-if="contactState === 'error'" class="mt-5 flex items-center gap-2 rounded-md bg-danger/20 px-3 py-2.5 text-copy-sm text-on-dark">
+              <UiIcon name="error" :size="18" />{{ t('sendError') }}
+            </p>
+
+            <UiButton
+              type="submit" variant="inverse" size="lg" class="mt-6"
+              :loading="contactState === 'sending'"
+            >
+              {{ contactState === 'sending' ? t('sending') : t('send') }}
+            </UiButton>
           </form>
         </div>
-        <div class="h-[400px] lg:h-full rounded-[2rem] overflow-hidden shadow-2xl relative">
-          <div class="absolute inset-0 bg-surface-variant flex items-center justify-center">
-            <img
-              alt="Campus Map"
-              class="w-full h-full object-cover grayscale opacity-50"
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuAt55uiT3WthK4XjV1Vf95Q0CGK5qOTTe6DdAcWJsI6VWfM_q4OjjGI4XmDlnMrUjoDT5saWsrcCP-qSVx2g0F_c8lAYE94UUuJTGyLtymU-m0i-Ec2GIindw7EjdkQESYqlorHdLrXvQZnlncH5fSmMOD2xyILDahFkLIrfGzvZChNfFxfsIFtS78wllo6fu_twNyaHrFOjplQBXEN3n4cNAzSAZp5u1a2y5DmmdZQhvOEi552Rh2vn_09tGVCv383w8reoE0M_Kk"
-            />
-            <div class="absolute glass-effect p-6 rounded-2xl text-primary text-center">
-              <span class="material-symbols-outlined text-4xl mb-stack-sm" style="font-variation-settings: 'FILL' 1;">location_on</span>
-              <p class="font-bold">{{ t('mainCampus') }}</p>
-              <p class="text-body-sm">{{ t('expandMap') }}</p>
-            </div>
-          </div>
-        </div>
       </div>
-    </section>
+    </UiSection>
   </div>
 </template>

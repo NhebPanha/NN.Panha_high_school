@@ -6,24 +6,20 @@ const { t } = useI18n({
     // Hero
     heroHeading: 'Shape Your Future',
     heroSubheading: 'Join a community where innovation meets excellence. Our admissions process is designed to find students who are ready to lead and excel.',
+    heroEyebrow: 'Admissions · Fall 2025',
+    heroCta: 'Start your application',
+    heroSecondary: 'Tuition & fees',
 
     // Enrollment steps section
     enrollmentSectionHeading: 'Your Journey Starts Here',
     enrollmentSectionSubheading: 'A simple, transparent four-step process to enrollment.',
 
-    // Step 1
     step1Title: 'Online Application',
     step1Desc: 'Complete the initial interest form and provide basic student details through our secure portal.',
-
-    // Step 2
     step2Title: 'Document Review',
     step2Desc: 'Upload transcripts, recommendation letters, and identification for our admissions board to review.',
-
-    // Step 3
     step3Title: 'Personal Interview',
     step3Desc: 'Meet with our faculty to discuss academic goals and see if BFHS is the right fit for your ambitions.',
-
-    // Step 4
     step4Title: 'Final Enrollment',
     step4Desc: 'Receive your acceptance, pay the enrollment fee, and get your student orientation package.',
 
@@ -71,14 +67,17 @@ const { t } = useI18n({
     referenceLabel: 'Your reference:',
 
     // CTA sidebar
-    enrollmentOpenBadge: 'ENROLLMENT OPEN',
+    enrollmentOpenBadge: 'Enrollment open',
     ctaHeading: 'Start Your Academic Excellence Journey.',
     ctaBody: 'Our application takes less than 10 minutes to complete. Start today and our admissions team will contact you within 48 hours for the next steps.',
     applicantStat: '1,200+ Applicants',
     applicantStatSub: 'Last year alone',
+    deadline: 'Priority deadline', deadlineValue: '15 March 2025',
+    aidLabel: 'Receive financial aid', aidValue: '30% of students',
 
     // FAQ
     faqHeading: 'Frequently Asked Questions',
+    faqLede: 'Still deciding? These are the questions families ask us most.',
     faq0Question: 'When is the application deadline for 2025?',
     faq0Answer: 'The priority application deadline for the Fall 2025 semester is March 15th, 2025. Rolling admissions will continue thereafter until all seats are filled.',
     faq1Question: 'Are there academic scholarships available?',
@@ -90,24 +89,20 @@ const { t } = useI18n({
     // Hero
     heroHeading: 'កំណត់អនាគតរបស់អ្នក',
     heroSubheading: 'ចូលរួមក្នុងសហគមន៍ដែលការច្នៃប្រឌិតជួបនឹងភាពល្អឥតខ្ចោះ។ ដំណើរការចូលរៀនរបស់យើងត្រូវបានរចនាឡើងដើម្បីស្វែងរកសិស្សដែលត្រៀមខ្លួនដឹកនាំ និងលេចធ្លោ។',
+    heroEyebrow: 'ការចូលរៀន · Fall 2025',
+    heroCta: 'ចាប់ផ្ដើមដាក់ពាក្យ',
+    heroSecondary: 'ថ្លៃសិក្សា',
 
     // Enrollment steps section
     enrollmentSectionHeading: 'ការធ្វើដំណើររបស់អ្នកចាប់ផ្ដើមនៅទីនេះ',
     enrollmentSectionSubheading: 'ដំណើរការចុះឈ្មោះចូលរៀនបួនជំហានដ៏សាមញ្ញ និងច្បាស់លាស់។',
 
-    // Step 1
     step1Title: 'ដាក់ពាក្យសុំតាមអ៊ីនធឺណិត',
     step1Desc: 'បំពេញទម្រង់បែបបទចំណាប់អារម្មណ៍ដំបូង និងផ្ដល់ព័ត៌មានមូលដ្ឋានរបស់សិស្សតាមរយៈវិបផតថលដែលមានសុវត្ថិភាពរបស់យើង។',
-
-    // Step 2
     step2Title: 'ពិនិត្យឯកសារ',
     step2Desc: 'បញ្ចូលវិញ្ញាបនបត្រ លិខិតណែនាំ និងឯកសារអត្តសញ្ញាណ ដើម្បីឱ្យក្រុមប្រឹក្សាចូលរៀនរបស់យើងធ្វើការពិនិត្យ។',
-
-    // Step 3
     step3Title: 'សម្ភាសន៍ផ្ទាល់ខ្លួន',
     step3Desc: 'ជួបប្រជុំជាមួយគ្រូបង្រៀនរបស់យើងដើម្បីពិភាក្សាអំពីគោលដៅសិក្សា និងពិនិត្យមើលថាតើ BFHS សមស្របនឹងបំណងប្រាថ្នារបស់អ្នកដែរឬទេ។',
-
-    // Step 4
     step4Title: 'ចុះឈ្មោះចូលរៀនជាស្ថាពរ',
     step4Desc: 'ទទួលការអនុម័ត បង់ថ្លៃចុះឈ្មោះ និងទទួលកញ្ចប់ណែនាំសិស្សថ្មីរបស់អ្នក។',
 
@@ -160,9 +155,12 @@ const { t } = useI18n({
     ctaBody: 'ពាក្យសុំរបស់យើងចំណាយពេលតិចជាង ១០ នាទី។ ចាប់ផ្ដើមថ្ងៃនេះ ហើយក្រុមការងារចូលរៀនរបស់យើងនឹងទាក់ទងអ្នកក្នុងរយៈពេល ៤៨ ម៉ោង។',
     applicantStat: 'ជាង ១,២០០ នាក់ដាក់ពាក្យ',
     applicantStatSub: 'នៅឆ្នាំមុនតែម្នាក់ឯង',
+    deadline: 'កាលកំណត់អាទិភាព', deadlineValue: '១៥ មីនា ២០២៥',
+    aidLabel: 'ទទួលជំនួយហិរញ្ញវត្ថុ', aidValue: '៣០% នៃសិស្ស',
 
     // FAQ
     faqHeading: 'សំណួរដែលសួរជាញឹកញាប់',
+    faqLede: 'នៅសម្រេចចិត្តមិនទាន់? នេះជាសំណួរដែលគ្រួសារសួរយើងញឹកញាប់បំផុត។',
     faq0Question: 'តើកាលបរិច្ឆេទផុតកំណត់ដាក់ពាក្យសម្រាប់ឆ្នាំ ២០២៥ គឺនៅពេលណា?',
     faq0Answer: 'កាលបរិច្ឆេទផុតកំណត់ដាក់ពាក្យអាទិភាពសម្រាប់ឆ្នាំសិក្សា Fall 2025 គឺថ្ងៃទី ១៥ ខែមីនា ឆ្នាំ ២០២៥។ ការទទួលពាក្យបន្តទៀតរហូតដល់កន្លែងសិក្សាពេញ។',
     faq1Question: 'តើមានអាហារូបករណ៍សិក្សាទេ?',
@@ -173,8 +171,7 @@ const { t } = useI18n({
 })
 
 // FAQ accordion state
-const faqOpen = ref<number | null>(null)
-
+const faqOpen = ref<number | null>(0)
 function toggleFaq(index: number) {
   faqOpen.value = faqOpen.value === index ? null : index
 }
@@ -204,7 +201,6 @@ async function handleApplicationSubmit() {
   }
 }
 
-// Reactive computed data arrays
 const enrollmentSteps = computed(() => [
   { icon: 'edit_note', title: t('step1Title'), desc: t('step1Desc') },
   { icon: 'cloud_upload', title: t('step2Title'), desc: t('step2Desc') },
@@ -227,6 +223,13 @@ const tuitionRows = computed(() => [
   { label: t('tuitionRowTotal'), amount: '$24,700', total: true },
 ])
 
+const grades = computed(() => [
+  { value: '9', label: t('gradeOption9') },
+  { value: '10', label: t('gradeOption10') },
+  { value: '11', label: t('gradeOption11') },
+  { value: '12', label: t('gradeOption12') },
+])
+
 const faqs = computed(() => [
   { question: t('faq0Question'), answer: t('faq0Answer') },
   { question: t('faq1Question'), answer: t('faq1Answer') },
@@ -236,194 +239,217 @@ const faqs = computed(() => [
 
 <template>
   <div>
-    <!-- Hero Section -->
-    <header class="relative w-full h-[512px] flex items-center justify-center overflow-hidden mb-stack-lg">
-      <div class="absolute inset-0 bg-primary-container z-0">
-        <img
-          class="w-full h-full object-cover opacity-40 mix-blend-overlay"
-          src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-8aGPN2n5Qomd3oeIfZEQZrli6H1C9voyhWnpMzGAn_o8RuhNaM1G6om1tH_F-9qrkgx62fq95KEHbYCHgW9-U1GtsD7S67QAB-yAnEVLWsACjhK2cAwBKPlpg02X5nYA6W3LU4ahyDfqXiSzAyexicK_QkNZ_Inq5CennjiC9_DrH6Fx6cfzwXBaceo0RXhF65iUi7IhoZ3BLICngEW5VqBTYBeWlVxA7K8XZV1Rh8JbE8Img5FlCM-GtGY6d7HGBDmgqMXHa2g"
-          alt="A sunlit, wide-angle shot of a prestigious modern high school campus during golden hour"
-        >
+    <PageHeader
+      :eyebrow="t('heroEyebrow')"
+      :title="t('heroHeading')"
+      :lede="t('heroSubheading')"
+      image-alt="A sunlit modern high school campus during golden hour"
+      image="https://lh3.googleusercontent.com/aida-public/AB6AXuC-8aGPN2n5Qomd3oeIfZEQZrli6H1C9voyhWnpMzGAn_o8RuhNaM1G6om1tH_F-9qrkgx62fq95KEHbYCHgW9-U1GtsD7S67QAB-yAnEVLWsACjhK2cAwBKPlpg02X5nYA6W3LU4ahyDfqXiSzAyexicK_QkNZ_Inq5CennjiC9_DrH6Fx6cfzwXBaceo0RXhF65iUi7IhoZ3BLICngEW5VqBTYBeWlVxA7K8XZV1Rh8JbE8Img5FlCM-GtGY6d7HGBDmgqMXHa2g"
+    >
+      <div class="flex flex-col gap-3 sm:flex-row">
+        <UiButton href="#apply-now" variant="inverse" size="lg" icon-trailing="arrow_downward">{{ t('heroCta') }}</UiButton>
+        <UiButton href="#tuition" variant="ghost" size="lg" class="border border-on-dark/25 text-on-dark hover:bg-on-dark/10">
+          {{ t('heroSecondary') }}
+        </UiButton>
       </div>
-      <div class="relative z-10 text-center px-margin-mobile">
-        <h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-white mb-stack-sm">{{ t('heroHeading') }}</h1>
-        <p class="font-body-lg text-body-lg text-surface-variant max-w-2xl mx-auto">{{ t('heroSubheading') }}</p>
-      </div>
-    </header>
+    </PageHeader>
 
-    <!-- Multi-step Enrollment Process -->
-    <section class="max-w-container-max mx-auto px-margin-desktop py-stack-lg">
-      <div class="text-center mb-stack-lg">
-        <h2 class="font-headline-md text-headline-md text-primary">{{ t('enrollmentSectionHeading') }}</h2>
-        <p class="text-on-surface-variant mt-2">{{ t('enrollmentSectionSubheading') }}</p>
-      </div>
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-gutter">
-        <div
-          v-for="(step, index) in enrollmentSteps"
-          :key="index"
-          class="glass-card p-stack-md rounded-[2rem] shadow-sm relative group hover:shadow-md transition-shadow"
-        >
-          <div class="w-12 h-12 bg-primary-container text-on-primary-container rounded-full flex items-center justify-center mb-stack-md font-bold text-xl">{{ index + 1 }}</div>
-          <span class="material-symbols-outlined text-secondary text-4xl mb-stack-sm">{{ step.icon }}</span>
-          <h3 class="font-headline-sm text-headline-sm text-primary mb-stack-sm">{{ step.title }}</h3>
-          <p class="text-body-sm text-on-surface-variant">{{ step.desc }}</p>
-        </div>
-      </div>
-    </section>
+    <!-- ── Process ──────────────────────────────────────────────────────── -->
+    <UiSection>
+      <UiSectionHead
+        :eyebrow="t('enrollmentSectionHeading')"
+        :title="t('enrollmentSectionSubheading')"
+        size="display"
+      />
 
-    <!-- Requirements & Tuition Bento Grid -->
-    <section class="bg-surface-container-low py-stack-lg">
-      <div class="max-w-container-max mx-auto px-margin-desktop">
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-gutter">
-          <!-- Requirements Checklist -->
-          <div class="lg:col-span-1 bg-white p-stack-md rounded-[2rem] shadow-sm">
-            <h3 class="font-headline-md text-headline-md text-primary mb-stack-md">{{ t('requirementsHeading') }}</h3>
-            <ul class="space-y-4">
-              <li
-                v-for="(req, index) in requirements"
-                :key="index"
-                class="flex items-start gap-stack-sm"
-              >
-                <span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+      <ol class="mt-12 grid gap-px overflow-hidden rounded-xl border border-line bg-line md:grid-cols-2 lg:grid-cols-4">
+        <li v-for="(step, index) in enrollmentSteps" :key="step.title" class="flex flex-col gap-4 bg-surface p-7">
+          <div class="flex items-center justify-between">
+            <span class="grid h-10 w-10 place-items-center rounded-md bg-brand text-on-brand">
+              <UiIcon :name="step.icon" :size="19" />
+            </span>
+            <span class="font-display text-title-2 tabular-nums text-line-strong">{{ String(index + 1).padStart(2, '0') }}</span>
+          </div>
+          <h3 class="font-display text-title-4 text-fg">{{ step.title }}</h3>
+          <p class="text-copy-sm text-fg-muted">{{ step.desc }}</p>
+        </li>
+      </ol>
+    </UiSection>
+
+    <!-- ── Requirements + tuition ───────────────────────────────────────── -->
+    <UiSection tone="muted" id="tuition">
+      <div class="grid gap-6 lg:grid-cols-12">
+        <div class="lg:col-span-5">
+          <div class="h-full rounded-xl border border-line bg-surface p-8">
+            <h2 class="font-display text-title-2 text-fg">{{ t('requirementsHeading') }}</h2>
+            <ul class="mt-6 divide-y divide-line border-t border-line">
+              <li v-for="req in requirements" :key="req.title" class="flex items-start gap-3 py-4">
+                <UiIcon name="check_circle" :size="19" :filled="true" class="mt-0.5 text-accent" />
                 <div>
-                  <p class="font-bold text-on-surface">{{ req.title }}</p>
-                  <p class="text-body-sm text-on-surface-variant">{{ req.desc }}</p>
+                  <p class="text-copy-sm font-medium text-fg">{{ req.title }}</p>
+                  <p class="mt-0.5 text-copy-sm text-fg-muted">{{ req.desc }}</p>
                 </div>
               </li>
             </ul>
           </div>
-          <!-- Tuition Table -->
-          <div class="lg:col-span-2 bg-white p-stack-md rounded-[2rem] shadow-sm flex flex-col">
-            <h3 class="font-headline-md text-headline-md text-primary mb-stack-md">{{ t('tuitionHeading') }}</h3>
-            <div class="overflow-x-auto">
-              <table class="w-full text-left">
+        </div>
+
+        <div class="lg:col-span-7">
+          <div class="flex h-full flex-col rounded-xl border border-line bg-surface p-8">
+            <h2 class="font-display text-title-2 text-fg">{{ t('tuitionHeading') }}</h2>
+
+            <div class="mt-6 overflow-x-auto">
+              <table class="w-full border-collapse text-left">
+                <caption class="sr-only">{{ t('tuitionHeading') }}</caption>
                 <thead>
-                  <tr class="border-b border-outline-variant">
-                    <th class="py-4 font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">{{ t('tuitionColFeeDesc') }}</th>
-                    <th class="py-4 font-label-md text-label-md text-on-surface-variant uppercase tracking-wider text-right">{{ t('tuitionColAmount') }}</th>
+                  <tr class="border-b border-line-strong">
+                    <th scope="col" class="pb-3 text-eyebrow uppercase text-fg-subtle">{{ t('tuitionColFeeDesc') }}</th>
+                    <th scope="col" class="pb-3 text-right text-eyebrow uppercase text-fg-subtle">{{ t('tuitionColAmount') }}</th>
                   </tr>
                 </thead>
-                <tbody class="divide-y divide-outline-variant/30">
-                  <tr
-                    v-for="(row, index) in tuitionRows"
-                    :key="index"
-                    :class="{ 'bg-surface-container-highest/20': row.total }"
-                  >
-                    <td class="py-4 font-medium" :class="row.total ? 'text-primary font-bold' : 'text-on-surface'">{{ row.label }}</td>
-                    <td class="py-4 text-right" :class="row.total ? 'text-primary font-bold' : 'text-on-surface'">{{ row.amount }}</td>
+                <tbody class="divide-y divide-line">
+                  <tr v-for="row in tuitionRows" :key="row.label" :class="row.total && 'bg-accent-tint/50'">
+                    <td class="py-3.5 text-copy-sm" :class="row.total ? 'font-semibold text-fg' : 'text-fg-muted'">
+                      {{ row.label }}
+                    </td>
+                    <td class="py-3.5 text-right tabular-nums" :class="row.total ? 'font-display text-title-4 text-fg' : 'text-copy-sm text-fg'">
+                      {{ row.amount }}
+                    </td>
                   </tr>
                 </tbody>
               </table>
             </div>
-            <p class="mt-auto pt-stack-md text-body-sm text-on-surface-variant italic">{{ t('tuitionNote') }}</p>
+
+            <p class="mt-auto pt-6 text-copy-sm text-fg-subtle">{{ t('tuitionNote') }}</p>
           </div>
         </div>
       </div>
-    </section>
+    </UiSection>
 
-    <!-- Online Application Form -->
-    <section class="max-w-container-max mx-auto px-margin-desktop py-stack-lg" id="apply-now">
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-gutter items-center">
-        <div class="order-2 lg:order-1">
-          <div class="glass-card p-10 rounded-[2rem] shadow-lg border border-white">
-            <h2 class="font-headline-md text-headline-md text-primary mb-stack-md">{{ t('applyOnlineHeading') }}</h2>
-            <form class="space-y-stack-md" @submit.prevent="handleApplicationSubmit">
-              <div class="grid grid-cols-1 md:grid-cols-2 gap-stack-md">
-                <div class="flex flex-col gap-unit">
-                  <label class="text-label-md text-on-surface-variant ml-2">{{ t('formLabelFirstName') }}</label>
-                  <input v-model="application.firstName" class="bg-surface-container-low border-none rounded-xl p-4 focus:ring-2 focus:ring-secondary transition-all" :placeholder="t('formPlaceholderFirstName')" required type="text">
-                </div>
-                <div class="flex flex-col gap-unit">
-                  <label class="text-label-md text-on-surface-variant ml-2">{{ t('formLabelLastName') }}</label>
-                  <input v-model="application.lastName" class="bg-surface-container-low border-none rounded-xl p-4 focus:ring-2 focus:ring-secondary transition-all" :placeholder="t('formPlaceholderLastName')" required type="text">
-                </div>
-              </div>
-              <div class="flex flex-col gap-unit">
-                <label class="text-label-md text-on-surface-variant ml-2">{{ t('formLabelEmail') }}</label>
-                <input v-model="application.email" class="bg-surface-container-low border-none rounded-xl p-4 focus:ring-2 focus:ring-secondary transition-all" :placeholder="t('formPlaceholderEmail')" required type="email">
-              </div>
-              <div class="flex flex-col gap-unit">
-                <label class="text-label-md text-on-surface-variant ml-2">{{ t('formLabelGrade') }}</label>
-                <select v-model="application.grade" class="bg-surface-container-low border-none rounded-xl p-4 focus:ring-2 focus:ring-secondary transition-all">
-                  <option value="9">{{ t('gradeOption9') }}</option>
-                  <option value="10">{{ t('gradeOption10') }}</option>
-                  <option value="11">{{ t('gradeOption11') }}</option>
-                  <option value="12">{{ t('gradeOption12') }}</option>
-                </select>
-              </div>
-              <div class="flex flex-col gap-unit">
-                <label class="text-label-md text-on-surface-variant ml-2">{{ t('formLabelComments') }}</label>
-                <textarea v-model="application.message" class="bg-surface-container-low border-none rounded-xl p-4 focus:ring-2 focus:ring-secondary transition-all" :placeholder="t('formPlaceholderComments')" rows="3"></textarea>
-              </div>
-              <p v-if="applyState === 'sent'" class="bg-secondary/10 text-secondary rounded-xl p-4 text-body-md font-semibold">
-                {{ t('alertSubmitSuccess') }}
-                <span v-if="applyReference" class="block font-normal text-on-surface-variant mt-1">{{ t('referenceLabel') }} {{ applyReference }}</span>
-              </p>
-              <p v-else-if="applyState === 'error'" class="bg-error-container/40 text-error rounded-xl p-4 text-body-md font-semibold">{{ t('formSubmitError') }}</p>
-              <button :disabled="applyState === 'sending'" class="w-full bg-primary text-on-primary py-4 rounded-xl font-bold text-body-lg hover:bg-secondary disabled:opacity-60 transition-colors shadow-md" type="submit">
-                {{ applyState === 'sending' ? t('formSubmitting') : t('formSubmitButton') }}
-              </button>
-            </form>
-          </div>
-        </div>
-        <div class="order-1 lg:order-2 space-y-stack-md">
-          <span class="bg-secondary/10 text-secondary px-4 py-1 rounded-full font-bold text-label-sm">{{ t('enrollmentOpenBadge') }}</span>
-          <h2 class="font-display-lg text-headline-md md:text-display-lg text-primary leading-tight">{{ t('ctaHeading') }}</h2>
-          <p class="text-body-lg text-on-surface-variant">{{ t('ctaBody') }}</p>
-          <div class="flex gap-stack-md">
-            <div class="flex -space-x-3 overflow-hidden">
+    <!-- ── Application ──────────────────────────────────────────────────── -->
+    <UiSection id="apply-now">
+      <div class="grid gap-12 lg:grid-cols-12 lg:gap-16">
+        <div class="lg:col-span-5">
+          <UiBadge tone="accent" dot>{{ t('enrollmentOpenBadge') }}</UiBadge>
+          <h2 class="mt-5 font-display text-display-2 text-balance text-fg">{{ t('ctaHeading') }}</h2>
+          <p class="mt-5 text-lead text-pretty text-fg-muted">{{ t('ctaBody') }}</p>
+
+          <dl class="mt-10 grid grid-cols-2 gap-6 border-t border-line pt-8">
+            <div>
+              <dt class="text-label text-fg-muted">{{ t('deadline') }}</dt>
+              <dd class="mt-1 font-display text-title-3 text-fg">{{ t('deadlineValue') }}</dd>
+            </div>
+            <div>
+              <dt class="text-label text-fg-muted">{{ t('aidLabel') }}</dt>
+              <dd class="mt-1 font-display text-title-3 text-fg">{{ t('aidValue') }}</dd>
+            </div>
+          </dl>
+
+          <div class="mt-8 flex items-center gap-4">
+            <div class="flex -space-x-2">
               <img
-                class="inline-block h-10 w-10 rounded-full ring-2 ring-white"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6aeRPTJ264M_w0NCA3gRkT_ipgO0xxA2k3oP-s9V2ZeEMHDKMLB6a82LFS1FFdmZwpRtd6aWgI5zoLLuDmpoHbFz3zIN2MwJWQSmelN2e-KoEPI4PJhYVP1N_4QBAMQ4l8uSnsJohfsIzfJ3F1-YapDx-4RpN3AlJzPOMhbXp17IX8dIj7pbEVFIp-3Q3uPY8k2vVWSUjT9COk2pqFmBt6DsFTnt6QkzJL44x0aD6h7NbGdJYvQx1RXtNEIJohiiRTmYHqqhoyTQ"
-                alt="Smiling young female student"
-              >
-              <img
-                class="inline-block h-10 w-10 rounded-full ring-2 ring-white"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBc6iYIuKWNPbMHtmFjuT0M-LPai0SltP0RIDwLUSQH9GIW-2rgsTlEbMuERDt_28KY-eTu-z8cQgiyh06CKujnYf8DPwMJZZ84rLQ8Zz1ejb2OuJ3DJ7UaoTNXfpdwHmpOqOZ3-Gafepo70v_LJ0gtIGDMt-U9nIFgaIxOJr3UzOsyvCqiyzGo38zHSQMH4NZfLLReMgKDYvdT4w5h2eymck8gxOAb1yZaZfBDt0Xz5-GTaavBhrMAl02p3vJmffBHEBBnOj9Fmh8"
-                alt="Diverse group of high school students laughing together"
-              >
-              <img
-                class="inline-block h-10 w-10 rounded-full ring-2 ring-white"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDBL-0u3587nHsUpGZ7mAZn5mmirvECxFtcBvUUkYeFPkVa6duhPpf-06KBnQsuz8l7t5sPQCwX5WNCs-QkxuP2BkgVCZ9faYgb3yHMAOlI_JbIAFrgN057sKv_6ji36gNYkTmrMf7MfPD_77eKMdpIxStXVqDPzQzAyjssoUlh5_X5X_HM9UsMFAwrkGdE13A7A2-Y_-8wRw6OTJaJpQEah6YU5-I76Y89jyUEYJA66QHH5ag1fjQzdy1p2FkGc8RmsOWcKeTyZEo"
-                alt="Confident male student holding a laptop"
+                v-for="(src, i) in [
+                  'https://lh3.googleusercontent.com/aida-public/AB6AXuB6aeRPTJ264M_w0NCA3gRkT_ipgO0xxA2k3oP-s9V2ZeEMHDKMLB6a82LFS1FFdmZwpRtd6aWgI5zoLLuDmpoHbFz3zIN2MwJWQSmelN2e-KoEPI4PJhYVP1N_4QBAMQ4l8uSnsJohfsIzfJ3F1-YapDx-4RpN3AlJzPOMhbXp17IX8dIj7pbEVFIp-3Q3uPY8k2vVWSUjT9COk2pqFmBt6DsFTnt6QkzJL44x0aD6h7NbGdJYvQx1RXtNEIJohiiRTmYHqqhoyTQ',
+                  'https://lh3.googleusercontent.com/aida-public/AB6AXuBc6iYIuKWNPbMHtmFjuT0M-LPai0SltP0RIDwLUSQH9GIW-2rgsTlEbMuERDt_28KY-eTu-z8cQgiyh06CKujnYf8DPwMJZZ84rLQ8Zz1ejb2OuJ3DJ7UaoTNXfpdwHmpOqOZ3-Gafepo70v_LJ0gtIGDMt-U9nIFgaIxOJr3UzOsyvCqiyzGo38zHSQMH4NZfLLReMgKDYvdT4w5h2eymck8gxOAb1yZaZfBDt0Xz5-GTaavBhrMAl02p3vJmffBHEBBnOj9Fmh8',
+                  'https://lh3.googleusercontent.com/aida-public/AB6AXuDBL-0u3587nHsUpGZ7mAZn5mmirvECxFtcBvUUkYeFPkVa6duhPpf-06KBnQsuz8l7t5sPQCwX5WNCs-QkxuP2BkgVCZ9faYgb3yHMAOlI_JbIAFrgN057sKv_6ji36gNYkTmrMf7MfPD_77eKMdpIxStXVqDPzQzAyjssoUlh5_X5X_HM9UsMFAwrkGdE13A7A2-Y_-8wRw6OTJaJpQEah6YU5-I76Y89jyUEYJA66QHH5ag1fjQzdy1p2FkGc8RmsOWcKeTyZEo',
+                ]"
+                :key="i" :src="src" alt="" loading="lazy"
+                class="h-9 w-9 rounded-full border-2 border-bg object-cover"
               >
             </div>
-            <div class="text-sm font-medium text-on-surface-variant">
-              <span class="text-primary font-bold block">{{ t('applicantStat') }}</span>
+            <p class="text-copy-sm text-fg-muted">
+              <span class="block font-medium text-fg">{{ t('applicantStat') }}</span>
               {{ t('applicantStatSub') }}
-            </div>
+            </p>
           </div>
         </div>
-      </div>
-    </section>
 
-    <!-- FAQ Section -->
-    <section class="bg-surface-container-high py-stack-lg">
-      <div class="max-w-3xl mx-auto px-margin-desktop">
-        <div class="text-center mb-stack-lg">
-          <h2 class="font-headline-md text-headline-md text-primary">{{ t('faqHeading') }}</h2>
+        <div class="lg:col-span-7">
+          <form class="rounded-xl border border-line bg-surface p-6 shadow-card sm:p-8" @submit.prevent="handleApplicationSubmit">
+            <h2 class="font-display text-title-2 text-fg">{{ t('applyOnlineHeading') }}</h2>
+
+            <div class="mt-7 grid gap-5 sm:grid-cols-2">
+              <UiField
+                v-model="application.firstName" :label="t('formLabelFirstName')"
+                :placeholder="t('formPlaceholderFirstName')" required autocomplete="given-name"
+              />
+              <UiField
+                v-model="application.lastName" :label="t('formLabelLastName')"
+                :placeholder="t('formPlaceholderLastName')" required autocomplete="family-name"
+              />
+            </div>
+
+            <div class="mt-5 grid gap-5 sm:grid-cols-2">
+              <UiField
+                v-model="application.email" :label="t('formLabelEmail')" type="email"
+                :placeholder="t('formPlaceholderEmail')" required autocomplete="email"
+              />
+              <UiField v-model="application.grade" :label="t('formLabelGrade')" as="select">
+                <option v-for="g in grades" :key="g.value" :value="g.value">{{ g.label }}</option>
+              </UiField>
+            </div>
+
+            <div class="mt-5">
+              <UiField
+                v-model="application.message" :label="t('formLabelComments')" as="textarea" :rows="4"
+                :placeholder="t('formPlaceholderComments')"
+              />
+            </div>
+
+            <div
+              v-if="applyState === 'sent'"
+              class="mt-6 flex gap-3 rounded-md border border-success/25 bg-success-tint p-4 text-on-success-tint"
+              role="status"
+            >
+              <UiIcon name="check_circle" :size="20" :filled="true" class="mt-0.5" />
+              <div>
+                <p class="text-copy-sm font-medium">{{ t('alertSubmitSuccess') }}</p>
+                <p v-if="applyReference" class="mt-0.5 text-copy-sm">{{ t('referenceLabel') }} <span class="font-mono">{{ applyReference }}</span></p>
+              </div>
+            </div>
+            <p
+              v-else-if="applyState === 'error'"
+              class="mt-6 flex items-center gap-2.5 rounded-md border border-danger/25 bg-danger-tint p-4 text-copy-sm text-on-danger-tint"
+              role="alert"
+            >
+              <UiIcon name="error" :size="20" />{{ t('formSubmitError') }}
+            </p>
+
+            <UiButton type="submit" size="lg" block class="mt-7" :loading="applyState === 'sending'">
+              {{ applyState === 'sending' ? t('formSubmitting') : t('formSubmitButton') }}
+            </UiButton>
+          </form>
         </div>
-        <div class="space-y-4">
-          <div
-            v-for="(faq, index) in faqs"
-            :key="index"
-            class="bg-white rounded-2xl p-6 shadow-sm cursor-pointer"
-            :class="{ 'active': faqOpen === index }"
-            @click="toggleFaq(index)"
-          >
-            <div class="flex justify-between items-center">
-              <h4 class="font-bold text-on-surface">{{ faq.question }}</h4>
-              <span
-                class="material-symbols-outlined transition-transform"
-                :class="{ 'rotate-180': faqOpen === index }"
-              >expand_more</span>
-            </div>
-            <div v-show="faqOpen === index" class="mt-4 text-on-surface-variant">
-              {{ faq.answer }}
-            </div>
+      </div>
+    </UiSection>
+
+    <!-- ── FAQ ──────────────────────────────────────────────────────────── -->
+    <UiSection tone="muted" narrow>
+      <UiSectionHead :eyebrow="t('faqHeading')" :title="t('faqLede')" align="center" size="display" />
+
+      <div class="mx-auto mt-10 max-w-3xl divide-y divide-line overflow-hidden rounded-xl border border-line bg-surface">
+        <div v-for="(faq, index) in faqs" :key="index">
+          <h3>
+            <button
+              type="button"
+              class="flex w-full items-center justify-between gap-4 px-6 py-5 text-left transition-colors hover:bg-surface-2"
+              :aria-expanded="faqOpen === index"
+              :aria-controls="`faq-panel-${index}`"
+              @click="toggleFaq(index)"
+            >
+              <span class="text-copy font-medium text-fg">{{ faq.question }}</span>
+              <UiIcon
+                name="expand_more" :size="20"
+                class="shrink-0 text-fg-subtle transition-transform duration-200"
+                :class="faqOpen === index && 'rotate-180'"
+              />
+            </button>
+          </h3>
+          <div v-show="faqOpen === index" :id="`faq-panel-${index}`" class="px-6 pb-5 text-copy-sm text-fg-muted">
+            {{ faq.answer }}
           </div>
         </div>
       </div>
-    </section>
+    </UiSection>
   </div>
 </template>

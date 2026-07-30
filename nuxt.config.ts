@@ -1,133 +1,180 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 
-// Semantic color tokens are exposed as CSS variables (RGB channel triplets) so
-// that Tailwind opacity modifiers (e.g. bg-surface/80) keep working AND the whole
-// palette can flip between light/dark by swapping the variables under `.dark`.
+/*
+ * DESIGN SYSTEM
+ * -------------
+ * One semantic token set, expressed as CSS variables holding RGB channel triplets
+ * so Tailwind opacity modifiers (bg-surface/70) keep working while the entire
+ * palette flips under `.dark`.
+ *
+ * Naming rules that keep dark mode honest:
+ *   - `fg` / `fg-muted` / `fg-subtle`  → text on ordinary page surfaces. Never
+ *     use `brand` for body headings; that is what broke dark mode before.
+ *   - `brand` / `accent`               → filled surfaces (buttons, footer, hero
+ *     scrims). Their `on-*` partners are the only correct text colour on top.
+ *   - `on-dark` / `on-dark-muted`      → text over photography or brand fills.
+ *     Constant in both themes by design.
+ */
+
 const color = (token: string) => `rgb(var(--c-${token}) / <alpha-value>)`
 
 const colorTokens = [
-  'inverse-primary', 'on-secondary', 'on-tertiary', 'primary-container',
-  'on-secondary-fixed-variant', 'on-tertiary-fixed-variant', 'on-tertiary-fixed',
-  'surface', 'surface-variant', 'secondary', 'surface-tint', 'surface-dim',
-  'surface-container-highest', 'background', 'outline', 'on-error-container',
-  'tertiary-fixed', 'surface-container', 'surface-container-lowest', 'tertiary',
-  'on-secondary-container', 'on-tertiary-container', 'primary-fixed-dim',
-  'outline-variant', 'surface-container-high', 'error', 'secondary-container',
-  'surface-bright', 'primary-fixed', 'on-primary', 'error-container',
-  'on-background', 'tertiary-fixed-dim', 'inverse-on-surface', 'on-surface',
-  'on-secondary-fixed', 'on-primary-container', 'on-primary-fixed-variant',
-  'secondary-fixed', 'on-error', 'primary', 'surface-container-low',
-  'inverse-surface', 'on-surface-variant', 'tertiary-container',
-  'on-primary-fixed', 'secondary-fixed-dim',
+  'bg', 'surface', 'surface-2', 'surface-3', 'overlay',
+  'fg', 'fg-muted', 'fg-subtle', 'on-dark', 'on-dark-muted',
+  'line', 'line-strong',
+  'brand', 'on-brand', 'brand-tint', 'on-brand-tint',
+  'accent', 'on-accent', 'accent-tint', 'on-accent-tint',
+  'success', 'success-tint', 'on-success-tint',
+  'warning', 'warning-tint', 'on-warning-tint',
+  'danger', 'danger-tint', 'on-danger-tint',
+  'info', 'info-tint', 'on-info-tint',
 ]
 const colors = Object.fromEntries(colorTokens.map((t) => [t, color(t)]))
 
-const khmer = '"Noto Sans Khmer"'
+// Fraunces carries the institutional voice; Inter does the work. Khmer falls back
+// to Noto so both scripts stay on the same optical baseline.
+const displayStack = ['Fraunces', '"Noto Serif Khmer"', '"Noto Sans Khmer"', 'Georgia', 'serif']
+const sansStack = ['Inter', '"Noto Sans Khmer"', 'system-ui', 'sans-serif']
+
 const tailwindConfig = `
   tailwind.config = {
     darkMode: "class",
     theme: {
       extend: {
-        "colors": ${JSON.stringify(colors)},
-        "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
-        "spacing": {
-          "margin-desktop": "40px", "stack-lg": "32px", "stack-md": "16px", "stack-sm": "8px",
-          "unit": "4px", "margin-mobile": "16px", "gutter": "24px", "container-max": "1280px"
+        colors: ${JSON.stringify(colors)},
+        fontFamily: {
+          display: ${JSON.stringify(displayStack)},
+          sans: ${JSON.stringify(sansStack)}
         },
-        "fontFamily": {
-          "display-lg": ["Lexend", ${khmer}, "sans-serif"],
-          "body-md": ["Inter", ${khmer}, "sans-serif"],
-          "label-sm": ["Inter", ${khmer}, "sans-serif"],
-          "body-lg": ["Inter", ${khmer}, "sans-serif"],
-          "headline-md": ["Lexend", ${khmer}, "sans-serif"],
-          "label-md": ["Inter", ${khmer}, "sans-serif"],
-          "display-lg-mobile": ["Lexend", ${khmer}, "sans-serif"],
-          "body-sm": ["Inter", ${khmer}, "sans-serif"],
-          "headline-sm": ["Lexend", ${khmer}, "sans-serif"]
+        fontSize: {
+          "display-1": ["clamp(2.5rem, 1.6rem + 3.6vw, 4rem)", { lineHeight: "1.04", letterSpacing: "-0.022em", fontWeight: "600" }],
+          "display-2": ["clamp(2rem, 1.4rem + 2.4vw, 3rem)",   { lineHeight: "1.08", letterSpacing: "-0.02em",  fontWeight: "600" }],
+          "title-1":   ["clamp(1.75rem, 1.4rem + 1.4vw, 2.25rem)", { lineHeight: "1.16", letterSpacing: "-0.018em", fontWeight: "600" }],
+          "title-2":   ["1.5rem",   { lineHeight: "1.25", letterSpacing: "-0.014em", fontWeight: "600" }],
+          "title-3":   ["1.25rem",  { lineHeight: "1.3",  letterSpacing: "-0.01em",  fontWeight: "600" }],
+          "title-4":   ["1.0625rem",{ lineHeight: "1.4",  letterSpacing: "-0.006em", fontWeight: "600" }],
+          "lead":      ["1.125rem", { lineHeight: "1.7" }],
+          "copy":      ["1rem",     { lineHeight: "1.65" }],
+          "copy-sm":   ["0.875rem", { lineHeight: "1.6" }],
+          "label":     ["0.8125rem",{ lineHeight: "1.25rem", fontWeight: "500" }],
+          "label-sm":  ["0.75rem",  { lineHeight: "1rem", fontWeight: "500" }],
+          "eyebrow":   ["0.6875rem",{ lineHeight: "1rem", letterSpacing: "0.14em", fontWeight: "600" }],
+          "metric":    ["clamp(1.75rem, 1.3rem + 1.6vw, 2.5rem)", { lineHeight: "1.05", letterSpacing: "-0.03em", fontWeight: "600" }]
         },
-        "fontSize": {
-          "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
-          "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
-          "label-sm": ["12px", {"lineHeight": "14px", "fontWeight": "500"}],
-          "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
-          "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
-          "label-md": ["14px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
-          "display-lg-mobile": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
-          "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
-          "headline-sm": ["20px", {"lineHeight": "28px", "fontWeight": "600"}]
+        borderRadius: { sm: "0.25rem", DEFAULT: "0.375rem", md: "0.5rem", lg: "0.75rem", xl: "1rem", "2xl": "1.25rem" },
+        maxWidth: { container: "1200px", prose: "68ch" },
+        spacing: { gutter: "1.5rem", page: "1.25rem", "page-lg": "2.5rem", section: "5rem" },
+        boxShadow: {
+          hair:  "0 1px 2px rgb(var(--c-shadow) / 0.05)",
+          card:  "0 1px 2px rgb(var(--c-shadow) / 0.05), 0 1px 3px rgb(var(--c-shadow) / 0.04)",
+          lift:  "0 4px 6px -2px rgb(var(--c-shadow) / 0.05), 0 12px 24px -6px rgb(var(--c-shadow) / 0.10)",
+          pop:   "0 8px 12px -4px rgb(var(--c-shadow) / 0.08), 0 24px 48px -12px rgb(var(--c-shadow) / 0.18)"
+        },
+        transitionTimingFunction: { out: "cubic-bezier(0.16, 1, 0.3, 1)" },
+        keyframes: {
+          "fade-up": { "0%": { opacity: "0", transform: "translateY(8px)" }, "100%": { opacity: "1", transform: "none" } },
+          "fade-in": { "0%": { opacity: "0" }, "100%": { opacity: "1" } }
+        },
+        animation: {
+          "fade-up": "fade-up .5s cubic-bezier(0.16,1,0.3,1) both",
+          "fade-in": "fade-in .3s ease both"
         }
       }
     }
   }
 `
 
-// Light = the original Stitch palette. Dark = a coherent Material-3 midnight-slate scheme.
-// Only non-"fixed" tokens change in dark; *-fixed tokens stay constant by design.
 const lightVars = `
-  --c-inverse-primary: 173 199 247; --c-on-secondary: 255 255 255; --c-on-tertiary: 255 255 255;
-  --c-primary-container: 26 54 93; --c-on-secondary-fixed-variant: 0 72 129;
-  --c-on-tertiary-fixed-variant: 65 71 78; --c-on-tertiary-fixed: 22 28 34;
-  --c-surface: 248 249 255; --c-surface-variant: 211 228 254; --c-secondary: 25 96 163;
-  --c-surface-tint: 69 95 136; --c-surface-dim: 203 219 245; --c-surface-container-highest: 211 228 254;
-  --c-background: 248 249 255; --c-outline: 116 119 127; --c-on-error-container: 147 0 10;
-  --c-tertiary-fixed: 221 227 235; --c-surface-container: 229 238 255; --c-surface-container-lowest: 255 255 255;
-  --c-tertiary: 27 33 39; --c-on-secondary-container: 0 71 127; --c-on-tertiary-container: 152 159 166;
-  --c-primary-fixed-dim: 173 199 247; --c-outline-variant: 196 198 207; --c-surface-container-high: 220 233 255;
-  --c-error: 186 26 26; --c-secondary-container: 125 182 255; --c-surface-bright: 248 249 255;
-  --c-primary-fixed: 214 227 255; --c-on-primary: 255 255 255; --c-error-container: 255 218 214;
-  --c-on-background: 11 28 48; --c-tertiary-fixed-dim: 193 199 207; --c-inverse-on-surface: 234 241 255;
-  --c-on-surface: 11 28 48; --c-on-secondary-fixed: 0 28 56; --c-on-primary-container: 134 160 205;
-  --c-on-primary-fixed-variant: 45 71 111; --c-secondary-fixed: 211 228 255; --c-on-error: 255 255 255;
-  --c-primary: 0 32 69; --c-surface-container-low: 239 244 255; --c-inverse-surface: 33 49 69;
-  --c-on-surface-variant: 67 71 78; --c-tertiary-container: 48 54 60; --c-on-primary-fixed: 0 27 60;
-  --c-secondary-fixed-dim: 162 201 255;
+  --c-bg: 250 249 246;        --c-surface: 255 255 255;   --c-surface-2: 245 243 239;
+  --c-surface-3: 236 233 226; --c-overlay: 17 35 63;      --c-shadow: 17 35 63;
+  --c-fg: 24 27 33;           --c-fg-muted: 88 95 105;    --c-fg-subtle: 133 141 152;
+  --c-on-dark: 255 255 255;   --c-on-dark-muted: 211 217 227;
+  --c-line: 228 224 216;      --c-line-strong: 205 199 189;
+  --c-brand: 17 35 63;        --c-on-brand: 255 255 255;  --c-brand-tint: 232 237 245;  --c-on-brand-tint: 17 35 63;
+  --c-accent: 150 101 45;     --c-on-accent: 255 255 255; --c-accent-tint: 246 238 227; --c-on-accent-tint: 116 76 31;
+  --c-success: 22 111 78;     --c-success-tint: 226 242 235; --c-on-success-tint: 17 88 62;
+  --c-warning: 160 104 8;     --c-warning-tint: 251 240 221; --c-on-warning-tint: 124 79 5;
+  --c-danger: 176 41 34;      --c-danger-tint: 251 232 230;  --c-on-danger-tint: 140 30 24;
+  --c-info: 30 88 150;        --c-info-tint: 229 239 250;    --c-on-info-tint: 25 71 122;
 `
+
 const darkVars = `
-  --c-background: 15 23 42; --c-surface: 15 23 42; --c-surface-bright: 30 41 59; --c-surface-dim: 8 13 24;
-  --c-surface-container-lowest: 8 12 20; --c-surface-container-low: 22 31 51; --c-surface-container: 27 39 64;
-  --c-surface-container-high: 36 50 77; --c-surface-container-highest: 46 61 90; --c-surface-variant: 46 61 90;
-  --c-on-background: 226 232 240; --c-on-surface: 226 232 240; --c-on-surface-variant: 176 187 204;
-  --c-outline: 139 148 163; --c-outline-variant: 58 69 92;
-  --c-primary: 173 199 247; --c-on-primary: 0 50 90; --c-primary-container: 45 71 111; --c-on-primary-container: 214 227 255;
-  --c-inverse-primary: 25 96 163; --c-surface-tint: 173 199 247;
-  --c-secondary: 162 201 255; --c-on-secondary: 0 50 90; --c-secondary-container: 0 72 129; --c-on-secondary-container: 207 228 255;
-  --c-tertiary: 193 199 207; --c-on-tertiary: 27 33 39; --c-tertiary-container: 48 54 60; --c-on-tertiary-container: 221 227 235;
-  --c-error: 255 180 171; --c-on-error: 105 0 5; --c-error-container: 147 0 10; --c-on-error-container: 255 218 214;
-  --c-inverse-surface: 226 232 240; --c-inverse-on-surface: 27 39 64;
+  --c-bg: 13 16 21;           --c-surface: 22 26 33;      --c-surface-2: 29 34 43;
+  --c-surface-3: 38 44 55;    --c-overlay: 5 8 13;        --c-shadow: 0 0 0;
+  --c-fg: 236 238 241;        --c-fg-muted: 165 172 183;  --c-fg-subtle: 124 131 143;
+  --c-on-dark: 255 255 255;   --c-on-dark-muted: 200 207 218;
+  --c-line: 42 48 59;         --c-line-strong: 58 66 80;
+  --c-brand: 21 42 74;        --c-on-brand: 255 255 255;  --c-brand-tint: 27 38 58;   --c-on-brand-tint: 198 214 238;
+  --c-accent: 216 168 99;     --c-on-accent: 40 26 8;     --c-accent-tint: 52 42 27;  --c-on-accent-tint: 232 197 143;
+  --c-success: 74 190 145;    --c-success-tint: 22 46 38;  --c-on-success-tint: 130 219 183;
+  --c-warning: 224 168 62;    --c-warning-tint: 51 40 18;  --c-on-warning-tint: 240 200 122;
+  --c-danger: 240 130 121;    --c-danger-tint: 58 27 25;   --c-on-danger-tint: 248 174 167;
+  --c-info: 122 174 236;      --c-info-tint: 22 36 54;     --c-on-info-tint: 168 203 243;
 `
 
 const globalStyle = `
-  :root { ${lightVars} }
-  .dark { ${darkVars} }
+  :root { ${lightVars} color-scheme: light; }
+  .dark { ${darkVars} color-scheme: dark; }
 
-  body { font-family: 'Inter', 'Noto Sans Khmer', sans-serif; }
+  * { border-color: rgb(var(--c-line)); }
 
-  html { scroll-behavior: smooth; }
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
 
-  .glass-effect {
-    backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
-    background: rgba(255, 255, 255, 0.7); border: 1px solid rgba(255, 255, 255, 0.2);
+  body {
+    font-family: Inter, 'Noto Sans Khmer', system-ui, sans-serif;
+    background-color: rgb(var(--c-bg));
+    color: rgb(var(--c-fg));
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-feature-settings: 'cv02','cv03','cv04','cv11';
   }
-  /* Frosted card used across About / Student Life — smooth easing so hover never snaps. */
-  .glass-card {
-    background: rgba(255, 255, 255, 0.7);
-    backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 4px 20px rgba(26, 54, 93, 0.05);
-    transition: transform .35s cubic-bezier(.4,0,.2,1), box-shadow .35s cubic-bezier(.4,0,.2,1), background-color .3s ease, color .3s ease;
+
+  /* Fraunces is variable: dial in a low-contrast, slightly wedge-serif cut that
+     reads as institutional rather than decorative. */
+  .font-display { font-variation-settings: 'SOFT' 0, 'WONK' 0, 'opsz' 40; }
+
+  /* One visible focus treatment for the whole product. */
+  :focus-visible {
+    outline: 2px solid rgb(var(--c-accent));
+    outline-offset: 2px;
+    border-radius: 2px;
   }
-  .text-shadow-sm { text-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+  :focus:not(:focus-visible) { outline: none; }
+
+  ::selection { background: rgb(var(--c-accent) / 0.25); }
+
+  .material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+    line-height: 1;
+    user-select: none;
+  }
+  .icon-filled { font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+
+  /* Hairline rule used above section headings. */
+  .rule { height: 1px; background: rgb(var(--c-line)); }
+
   .hide-scrollbar::-webkit-scrollbar { display: none; }
   .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
 
-  /* Dark-mode adjustments for hardcoded light utilities used as card/section surfaces */
-  .dark .bg-white { background-color: rgb(27 39 64); }
-  .dark .bg-primary { background-color: rgb(13 20 36); }
-  .dark .glass-effect { background: rgba(30, 41, 59, 0.6); border-color: rgba(255,255,255,0.08); }
-  .dark .glass-panel, .dark .glass-card { background: rgba(30, 41, 59, 0.6) !important; border-color: rgba(255,255,255,0.08) !important; }
-  .dark img { filter: brightness(0.9); }
-  html { color-scheme: light; }
-  html.dark { color-scheme: dark; }
+  .thin-scrollbar { scrollbar-width: thin; scrollbar-color: rgb(var(--c-line-strong)) transparent; }
+  .thin-scrollbar::-webkit-scrollbar { width: 8px; height: 8px; }
+  .thin-scrollbar::-webkit-scrollbar-track { background: transparent; }
+  .thin-scrollbar::-webkit-scrollbar-thumb {
+    background: rgb(var(--c-line-strong)); border-radius: 999px;
+    border: 2px solid transparent; background-clip: content-box;
+  }
+
+  /* Duotone scrim for photography so white text always clears AA. */
+  .scrim-b { background: linear-gradient(to top, rgb(var(--c-overlay) / .88) 0%, rgb(var(--c-overlay) / .55) 38%, rgb(var(--c-overlay) / .05) 100%); }
+  .scrim-l { background: linear-gradient(to right, rgb(var(--c-overlay) / .86) 0%, rgb(var(--c-overlay) / .55) 45%, rgb(var(--c-overlay) / .12) 100%); }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after {
+      animation-duration: .01ms !important; animation-iteration-count: 1 !important;
+      transition-duration: .01ms !important; scroll-behavior: auto !important;
+    }
+  }
 `
 
 export default defineNuxtConfig({
@@ -145,20 +192,23 @@ export default defineNuxtConfig({
       title: 'Bright Future High School',
       titleTemplate: (title?: string) =>
         title && title !== 'Bright Future High School'
-          ? `${title} | Bright Future High School`
+          ? `${title} · Bright Future High School`
           : 'Bright Future High School',
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1.0' },
+        { name: 'theme-color', content: '#11233F' },
       ],
       link: [
+        { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
+        { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' },
         {
           rel: 'stylesheet',
-          href: 'https://fonts.googleapis.com/css2?family=Lexend:wght@400;600;700;900&family=Inter:wght@400;500;600&family=Noto+Sans+Khmer:wght@400;500;600;700&display=swap',
+          href: 'https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=Noto+Sans+Khmer:wght@400;500;600;700&family=Noto+Serif+Khmer:wght@400;600;700&display=swap',
         },
         {
           rel: 'stylesheet',
-          href: 'https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap',
+          href: 'https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap',
         },
       ],
       script: [
